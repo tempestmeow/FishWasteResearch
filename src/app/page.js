@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { Fish, Waves, Recycle, TreePine, Globe, BarChart3, Users, TrendingUp } from 'lucide-react';
+import { Fish, Waves, Recycle, TreePine, Globe, BarChart3, Users, TrendingUp, Heart, Clock, Package } from 'lucide-react';
 
 const AnimatedCounter = ({ end, duration = 2, suffix = '', prefix = '' }) => {
   const [count, setCount] = useState(0);
@@ -102,7 +102,8 @@ export default function Home() {
         "The Philippines loses approximately $2.3 billion annually due to inefficient fish waste management and unsustainable fishing practices.",
         "Small-scale fishermen, who comprise 85% of the fishing workforce, face reduced income as fish stocks decline due to pollution and habitat degradation.",
         "Tourism revenue decreases by an estimated 15% in coastal areas affected by fish waste pollution, impacting local economies heavily dependent on marine tourism.",
-        "Healthcare costs increase by 20% in fishing communities due to waterborne diseases and respiratory problems caused by improper waste management."
+        "Healthcare costs increase by 20% in fishing communities due to waterborne diseases and respiratory problems caused by improper waste management.",
+        "Currently, fish waste is only converted into low-value products like animal feed or fertilizer, missing opportunities for high-value biotechnology applications."
       ]
     },
     social: {
@@ -120,7 +121,8 @@ export default function Home() {
         "Current fishing practices are unsustainable, with 70% of Philippine fish stocks either fully exploited or overexploited.",
         "The lack of proper waste management systems perpetuates a cycle of environmental degradation and resource depletion.",
         "Climate change compounds the problem, with rising sea temperatures and ocean acidification affecting fish populations and waste decomposition rates.",
-        "Without immediate intervention, fish waste management issues will worsen, potentially leading to ecosystem collapse in critical marine areas."
+        "Without immediate intervention, fish waste management issues will worsen, potentially leading to ecosystem collapse in critical marine areas.",
+        "Over 50% of fish parts including fins, heads, skin, and guts are considered waste, yet skin and bones make up most of the fish's weight."
       ]
     }
   };
@@ -212,7 +214,7 @@ export default function Home() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
             >
-              The Philippines faces a critical challenge in sustainable fisheries management
+              The Philippines faces a critical challenge in sustainable fisheries management as fish consumption surges globally
             </motion.p>
           </motion.div>
 
@@ -263,13 +265,108 @@ export default function Home() {
                   <Recycle className="w-8 h-8 text-cyan-400" />
                 </div>
                 <div className="text-4xl md:text-5xl font-bold mb-4">
-                  <AnimatedCounter end={25} suffix="%" />
+                  <AnimatedCounter end={50} suffix="%" />
                 </div>
-                <p className="text-cyan-200">Waste Discarded</p>
-                <p className="text-sm text-cyan-300 mt-2">Environmental Impact</p>
+                <p className="text-cyan-200">Fish Parts Wasted</p>
+                <p className="text-sm text-cyan-300 mt-2">Fins, Heads, Skin, Guts</p>
               </motion.div>
             </FloatingElement>
           </motion.div>
+        </div>
+      </section>
+
+      {/* New section about consumption growth */}
+      <section className="relative z-30 px-6 py-16">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/95 via-blue-900/90 to-slate-900/95 z-10"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <div className="flex items-center justify-center mb-6">
+              <Heart className="w-12 h-12 text-cyan-400 mr-4" />
+              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                Rising Global Demand
+              </h2>
+            </div>
+            <p className="text-xl text-cyan-100 max-w-3xl mx-auto">
+              Fish consumption has doubled worldwide, driven by health awareness and economic growth
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-blue-800/50 to-cyan-800/50 rounded-3xl p-8 backdrop-blur-lg border border-cyan-400/20"
+            >
+              <div className="flex items-center mb-6">
+                <Clock className="w-8 h-8 text-cyan-400 mr-3" />
+                <h3 className="text-2xl font-bold text-cyan-300">Historical Growth</h3>
+              </div>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <span>1961 Consumption</span>
+                  <span className="font-bold text-cyan-400">9.0 kg</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span>Current Consumption</span>
+                  <span className="font-bold text-cyan-400">20.5 kg</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span>Growth Rate</span>
+                  <span className="font-bold text-cyan-400">
+                    <AnimatedCounter end={128} suffix="%" />
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-cyan-800/50 to-blue-800/50 rounded-3xl p-8 backdrop-blur-lg border border-cyan-400/20"
+            >
+              <div className="flex items-center mb-6">
+                <Heart className="w-8 h-8 text-cyan-400 mr-3" />
+                <h3 className="text-2xl font-bold text-cyan-300">Health Benefits</h3>
+              </div>
+              <div className="text-cyan-100 space-y-3">
+                <p>Essential source of nutrients and animal protein for human health</p>
+                <p>Driving increased awareness and consumption globally</p>
+                <p>Critical for food security in developing nations</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-blue-800/50 to-cyan-800/50 rounded-3xl p-8 backdrop-blur-lg border border-cyan-400/20"
+            >
+              <div className="flex items-center mb-6">
+                <TrendingUp className="w-8 h-8 text-cyan-400 mr-3" />
+                <h3 className="text-2xl font-bold text-cyan-300">Growth Drivers</h3>
+              </div>
+              <div className="text-cyan-100 space-y-3">
+                <p>• Rising global incomes</p>
+                <p>• Aquaculture expansion</p>
+                <p>• Health consciousness</p>
+                <p>• Population growth</p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -301,7 +398,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -321,9 +418,9 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span>Annual Global Fish Waste</span>
+                  <span>Annual Fishery Waste</span>
                   <span className="font-bold text-cyan-400">
-                    <AnimatedCounter end={160} suffix="M tonnes" />
+                    <AnimatedCounter end={20} suffix="M tonnes" />
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
@@ -360,14 +457,51 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span>Fish Tissue Discarded</span>
+                  <span>Waste Given for Reuse</span>
                   <span className="font-bold text-cyan-400">
-                    <AnimatedCounter end={50} suffix="%" />
+                    <AnimatedCounter end={19.1} suffix=" kg" />
                   </span>
                 </div>
               </div>
             </motion.div>
           </div>
+
+          {/* New section about waste composition */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-cyan-400/20"
+          >
+            <div className="flex items-center justify-center mb-6">
+              <Package className="w-8 h-8 text-cyan-400 mr-3" />
+              <h3 className="text-2xl font-bold text-cyan-300">Fish Waste Composition</h3>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+              <div className="space-y-2">
+                <div className="text-2xl font-bold text-cyan-400">Heads & Tails</div>
+                <div className="text-cyan-200">Processing waste</div>
+              </div>
+              <div className="space-y-2">
+                <div className="text-2xl font-bold text-cyan-400">Skin & Scales</div>
+                <div className="text-cyan-200">External parts</div>
+              </div>
+              <div className="space-y-2">
+                <div className="text-2xl font-bold text-cyan-400">Bones & Gills</div>
+                <div className="text-cyan-200">Internal structures</div>
+              </div>
+              <div className="space-y-2">
+                <div className="text-2xl font-bold text-cyan-400">Fins & Guts</div>
+                <div className="text-cyan-200">Discarded organs</div>
+              </div>
+            </div>
+            <div className="mt-6 text-center">
+              <p className="text-cyan-100">
+                <span className="font-bold text-cyan-400">Current use:</span> Mostly converted to low-value animal feed or fertilizer
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -435,13 +569,16 @@ export default function Home() {
             <div className="flex items-center justify-center mb-6">
               <Fish className="w-10 h-10 text-cyan-400 mr-4" />
               <h3 className="text-3xl font-bold text-cyan-300">
-                The Path Forward
+                The Transformative Question
               </h3>
+            </div>
+            <div className="text-2xl font-bold text-cyan-200 mb-8">
+              "How can we make better use of fish waste and transform these by-products into valuable resources?"
             </div>
             <p className="text-lg text-cyan-100 mb-8 leading-relaxed max-w-4xl mx-auto">
               Addressing this crisis requires innovative solutions that transform fish waste from an environmental burden 
               into valuable resources. The development of sustainable biotech applications offers promising pathways 
-              for economic growth while protecting marine ecosystems.
+              for economic growth while protecting marine ecosystems and unlocking the hidden potential in what was once considered waste.
             </p>
           </motion.div>
         </div>
