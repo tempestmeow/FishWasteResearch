@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { Fish, Waves, Recycle, TreePine, Globe, BarChart3, Users, TrendingUp, Heart, Clock, Package } from 'lucide-react';
+import Link from 'next/link';
 
 const AnimatedCounter = ({ end, duration = 2, suffix = '', prefix = '' }) => {
   const [count, setCount] = useState(0);
@@ -179,17 +180,19 @@ export default function Home() {
             </motion.h1>
             <div className="hidden md:flex space-x-8">
               {['Problem', 'Science', 'Solution', 'Applications', 'Impact'].map((item, index) => (
-                <motion.a
+                <motion.div
                   key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="hover:text-cyan-400 transition-colors duration-300"
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 + 0.5 }}
-                  whileHover={{ scale: 1.1 }}
                 >
-                  {item}
-                </motion.a>
+                  <Link 
+                    href={item === 'Problem' ? '/' : `/${item.toLowerCase()}`}
+                    className={`hover:text-cyan-400 transition-colors duration-300 ${item === 'Problem' ? 'text-cyan-400' : 'text-white'}`}
+                  >
+                    {item}
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </nav>
