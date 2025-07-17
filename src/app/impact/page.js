@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { Fish, Globe, Sparkles, TrendingUp, Heart, Users, Leaf, Factory, Award, ArrowRight, MapPin, Waves, Sun, TreePine, DollarSign, Briefcase, GraduationCap, Home, Target, Lightbulb, Star, Zap, Crown, Building2, Recycle, Shield, CheckCircle, BarChart3, Droplets, Wind, Book, Microscope, ChevronDown, ChevronRight, ChevronLeft, Eye, Atom, FlaskConical, Beaker } from 'lucide-react';
+import { Fish, Globe, Sparkles, TrendingUp, Heart, Users, Leaf, Factory, Award, ArrowRight, MapPin, Waves, Sun, TreePine, DollarSign, Briefcase, GraduationCap, Home, Target, Lightbulb, Star, Zap, Crown, Building2, Recycle, Shield, CheckCircle, BarChart3, Droplets, Wind, Book, Microscope, ChevronDown, ChevronRight, ChevronLeft, Eye, Atom, FlaskConical, Beaker, Menu, X } from 'lucide-react';
 import Link from 'next/link';
 
 const AnimatedCounter = ({ end, duration = 3, suffix = '', prefix = '', decimals = 0 }) => {
@@ -105,30 +105,30 @@ const EnhancedMetricCard = ({ icon, value, label, description, color = "amber", 
       boxShadow: "0 25px 50px -12px rgba(251, 191, 36, 0.4)",
       scale: 1.05
     }}
-    className="bg-gradient-to-br from-white/95 to-amber-50/95 backdrop-blur-lg rounded-3xl p-8 shadow-2xl border border-amber-200 relative overflow-hidden group"
+    className="bg-gradient-to-br from-white/95 to-amber-50/95 backdrop-blur-lg rounded-3xl p-6 md:p-8 shadow-2xl border border-amber-200 relative overflow-hidden group"
   >
     {/* Background Pattern */}
     <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-amber-200/30 to-orange-200/30 rounded-full opacity-50 transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500"></div>
     
     {/* Floating Icon Background */}
     <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
-      <div className="text-6xl text-amber-500">{icon}</div>
+      <div className="text-4xl md:text-6xl text-amber-500">{icon}</div>
     </div>
     
     <div className="relative z-10">
-      <div className="flex items-center mb-6">
-        <div className={`w-16 h-16 bg-gradient-to-br from-${color}-400 to-${color}-600 rounded-2xl flex items-center justify-center shadow-xl mr-4 group-hover:scale-110 transition-transform duration-300`}>
-          <div className="text-white text-2xl">{icon}</div>
+      <div className="flex items-center mb-4 md:mb-6">
+        <div className={`w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-${color}-400 to-${color}-600 rounded-2xl flex items-center justify-center shadow-xl mr-3 md:mr-4 group-hover:scale-110 transition-transform duration-300`}>
+          <div className="text-white text-lg md:text-2xl">{icon}</div>
         </div>
         <div>
-          <div className={`text-4xl font-bold text-${color}-600 mb-1`}>{value}</div>
-          <div className="text-sm font-semibold text-gray-600 uppercase tracking-wide">{label}</div>
+          <div className={`text-3xl md:text-4xl font-bold text-${color}-600 mb-1`}>{value}</div>
+          <div className="text-xs md:text-sm font-semibold text-gray-600 uppercase tracking-wide">{label}</div>
         </div>
       </div>
-      <p className="text-gray-600 leading-relaxed text-sm">{description}</p>
+      <p className="text-gray-600 leading-relaxed text-xs md:text-sm">{description}</p>
       
       {/* Progress indicator */}
-      <div className="mt-4 w-full bg-amber-100 rounded-full h-2">
+      <div className="mt-3 md:mt-4 w-full bg-amber-100 rounded-full h-2">
         <motion.div
           className={`h-2 bg-gradient-to-r from-${color}-400 to-${color}-600 rounded-full`}
           initial={{ width: 0 }}
@@ -201,15 +201,15 @@ const InteractiveDetailCard = ({ title, content, stats = [], icon, delay = 0 }) 
     whileInView={{ opacity: 1, x: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.8, delay }}
-    className="bg-gradient-to-br from-white to-amber-50 rounded-2xl p-8 shadow-lg border border-amber-100 mb-8 group hover:shadow-2xl transition-all duration-300"
+    className="bg-gradient-to-br from-white to-amber-50 rounded-2xl p-6 md:p-8 shadow-lg border border-amber-100 mb-8 group hover:shadow-2xl transition-all duration-300"
   >
-    <div className="flex items-start mb-6">
-      <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-        <div className="text-white text-xl">{icon}</div>
+    <div className="flex items-start mb-4 md:mb-6">
+      <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-xl flex items-center justify-center mr-3 md:mr-4 group-hover:scale-110 transition-transform duration-300">
+        <div className="text-white text-lg md:text-xl">{icon}</div>
       </div>
       <div className="flex-1">
-        <h3 className="text-2xl font-bold text-amber-800 mb-4 group-hover:text-amber-700 transition-colors">{title}</h3>
-        <p className="text-gray-700 leading-relaxed mb-6">{content}</p>
+        <h3 className="text-lg md:text-2xl font-bold text-amber-800 mb-3 md:mb-4 group-hover:text-amber-700 transition-colors">{title}</h3>
+        <p className="text-gray-700 leading-relaxed mb-4 md:mb-6 text-sm md:text-base">{content}</p>
       </div>
     </div>
     
@@ -218,11 +218,11 @@ const InteractiveDetailCard = ({ title, content, stats = [], icon, delay = 0 }) 
         {stats.map((stat, index) => (
           <motion.div 
             key={index}
-            className="bg-amber-100 rounded-lg p-4 text-center hover:bg-amber-200 transition-colors"
+            className="bg-amber-100 rounded-lg p-3 md:p-4 text-center hover:bg-amber-200 transition-colors"
             whileHover={{ scale: 1.05 }}
           >
-            <div className="text-2xl font-bold text-amber-600">{stat.value}</div>
-            <div className="text-sm text-amber-700">{stat.label}</div>
+            <div className="text-xl md:text-2xl font-bold text-amber-600">{stat.value}</div>
+            <div className="text-xs md:text-sm text-amber-700">{stat.label}</div>
           </motion.div>
         ))}
       </div>
@@ -330,6 +330,8 @@ const VisualImpactShowcase = () => {
 };
 
 export default function Impact() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
   const environmentalSections = [
     <InteractiveDetailCard
       key="waste-reduction"
@@ -487,7 +489,9 @@ export default function Impact() {
                 <Fish className="w-8 h-8 text-amber-600" />
                 FishSkin
               </motion.h1>
-              <div className="hidden md:flex space-x-8">
+              
+              {/* Desktop Navigation */}
+              <div className="hidden lg:flex space-x-8">
                 {['Problem', 'Science', 'Solution', 'Applications', 'Impact', 'References'].map((item, index) => (
                   <motion.div
                     key={item}
@@ -504,7 +508,42 @@ export default function Impact() {
                   </motion.div>
                 ))}
               </div>
+
+              {/* Mobile Menu Button */}
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="lg:hidden p-2 text-gray-600 hover:text-amber-600 transition-colors"
+              >
+                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
             </nav>
+
+            {/* Mobile Navigation */}
+            {isMobileMenuOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+                className="lg:hidden mt-4 bg-white/10 backdrop-blur-lg rounded-xl border border-amber-400/20 p-4"
+              >
+                <div className="grid grid-cols-2 gap-3">
+                  {['Problem', 'Science', 'Solution', 'Applications', 'Impact', 'References'].map((item, index) => (
+                    <Link
+                      key={item}
+                      href={item === 'Problem' ? '/' : `/${item.toLowerCase()}`}
+                      className={`block px-4 py-3 rounded-lg text-center transition-colors duration-300 ${
+                        item === 'Impact' 
+                          ? 'bg-amber-400/20 text-amber-600 font-medium' 
+                          : 'text-gray-600 hover:bg-white/10 hover:text-amber-600'
+                      }`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item}
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            )}
           </motion.header>
 
           {/* Hero Content - Keep the design you liked */}
@@ -537,15 +576,15 @@ export default function Impact() {
               transition={{ duration: 1.2, delay: 0.5 }}
               className="text-center mb-16"
             >
-              <h2 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-amber-600 via-orange-500 to-yellow-600 bg-clip-text text-transparent mb-6 leading-tight">
+              <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold bg-gradient-to-r from-amber-600 via-orange-500 to-yellow-600 bg-clip-text text-transparent mb-6 leading-tight">
                 TRANSFORMING
               </h2>
-              <h3 className="text-4xl md:text-6xl font-bold text-gray-800 mb-8">
+              <h3 className="text-3xl md:text-4xl lg:text-6xl font-bold text-gray-800 mb-8">
                 The Philippines
               </h3>
               
               <motion.p 
-                className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-12"
+                className="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-12"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 1 }}
@@ -603,10 +642,10 @@ export default function Impact() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent mb-6">
               A Sustainable Future for the Philippines
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Visualizing the transformative journey from environmental challenge to global biotechnology leadership
             </p>
           </motion.div>
@@ -672,8 +711,8 @@ export default function Impact() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-8">The Future Starts Now</h2>
-            <p className="text-2xl mb-12 leading-relaxed opacity-90">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8">The Future Starts Now</h2>
+            <p className="text-lg md:text-xl lg:text-2xl mb-12 leading-relaxed opacity-90">
               Fish collagen biomaterials represent more than just a technological breakthrough—they embody a vision of sustainable development 
               where environmental healing, economic prosperity, and social empowerment converge to create lasting positive change for the Philippines and the world.
             </p>

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { Fish, Sparkles, Heart, Pill, Package, Leaf, Droplets, Shield, Star, Zap, Eye, Microscope, FlaskConical, Palette, Activity, ChevronDown, ChevronRight, ArrowRight, CheckCircle, TrendingUp, Award, Sun, Crown, Atom, Beaker, TestTube, Target, Recycle } from 'lucide-react';
+import { Fish, Sparkles, Heart, Pill, Package, Leaf, Droplets, Shield, Star, Zap, Eye, Microscope, FlaskConical, Palette, Activity, ChevronDown, ChevronRight, ArrowRight, CheckCircle, TrendingUp, Award, Sun, Crown, Atom, Beaker, TestTube, Target, Recycle, Menu, X } from 'lucide-react';
 import Link from 'next/link';
 
 const AnimatedCounter = ({ end, duration = 3, suffix = '', prefix = '', decimals = 0 }) => {
@@ -652,6 +652,8 @@ const CollagenVsGelatinComparison = () => {
 };
 
 export default function Applications() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-violet-50 to-indigo-50 text-gray-800 relative overflow-hidden">
       {/* Floating Background Elements */}
@@ -690,7 +692,9 @@ export default function Applications() {
                 <Fish className="w-8 h-8 text-purple-600" />
                 FishSkin
               </motion.h1>
-              <div className="hidden md:flex space-x-8">
+              
+              {/* Desktop Navigation */}
+              <div className="hidden lg:flex space-x-8">
                 {['Problem', 'Science', 'Solution', 'Applications', 'Impact', 'References'].map((item, index) => (
                   <motion.div
                     key={item}
@@ -707,7 +711,42 @@ export default function Applications() {
                   </motion.div>
                 ))}
               </div>
+
+              {/* Mobile Menu Button */}
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="lg:hidden p-2 text-gray-600 hover:text-purple-600 transition-colors"
+              >
+                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
             </nav>
+
+            {/* Mobile Navigation */}
+            {isMobileMenuOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+                className="lg:hidden mt-4 bg-white/10 backdrop-blur-lg rounded-xl border border-purple-400/20 p-4"
+              >
+                <div className="grid grid-cols-2 gap-3">
+                  {['Problem', 'Science', 'Solution', 'Applications', 'Impact', 'References'].map((item, index) => (
+                    <Link
+                      key={item}
+                      href={item === 'Problem' ? '/' : `/${item.toLowerCase()}`}
+                      className={`block px-4 py-3 rounded-lg text-center transition-colors duration-300 ${
+                        item === 'Applications' 
+                          ? 'bg-purple-400/20 text-purple-600 font-medium' 
+                          : 'text-gray-600 hover:bg-white/10 hover:text-purple-600'
+                      }`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item}
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            )}
           </motion.header>
 
           {/* Hero Content */}
@@ -796,12 +835,12 @@ export default function Applications() {
                 </div>
               </div>
 
-              <h2 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 bg-clip-text text-transparent mb-6">
+              <h2 className="text-3xl md:text-5xl lg:text-7xl font-bold bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 bg-clip-text text-transparent mb-6">
                 APPLICATIONS
               </h2>
               
               <motion.p 
-                className="text-2xl text-gray-700 mb-12 max-w-4xl mx-auto leading-relaxed"
+                className="text-lg md:text-xl lg:text-2xl text-gray-700 mb-12 max-w-4xl mx-auto leading-relaxed"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 1 }}
@@ -817,35 +856,35 @@ export default function Applications() {
                 transition={{ delay: 1, duration: 1 }}
               >
                 <div className="bg-white/90 backdrop-blur-lg rounded-2xl p-6 border border-purple-200 shadow-lg">
-                  <div className="text-4xl md:text-5xl font-bold mb-3 text-purple-600">
+                  <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 text-purple-600">
                     <AnimatedCounter end={4} />
                   </div>
-                  <p className="text-gray-700 font-medium mb-2">Major Industries</p>
-                  <p className="text-gray-500 text-sm">Biomedical, cosmetics, food, healthcare sectors transformed</p>
+                  <p className="text-gray-700 font-medium mb-2 text-sm md:text-base">Major Industries</p>
+                  <p className="text-gray-500 text-xs md:text-sm">Biomedical, cosmetics, food, healthcare sectors transformed</p>
                 </div>
                 
                 <div className="bg-white/90 backdrop-blur-lg rounded-2xl p-6 border border-purple-200 shadow-lg">
-                  <div className="text-4xl md:text-5xl font-bold mb-3 text-purple-600">
+                  <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 text-purple-600">
                     <AnimatedCounter end={15} suffix="+" />
                   </div>
-                  <p className="text-gray-700 font-medium mb-2">Unique Compounds</p>
-                  <p className="text-gray-500 text-sm">Different collagen and gelatin formulations for specific uses</p>
+                  <p className="text-gray-700 font-medium mb-2 text-sm md:text-base">Unique Compounds</p>
+                  <p className="text-gray-500 text-xs md:text-sm">Different collagen and gelatin formulations for specific uses</p>
                 </div>
                 
                 <div className="bg-white/90 backdrop-blur-lg rounded-2xl p-6 border border-purple-200 shadow-lg">
-                  <div className="text-4xl md:text-5xl font-bold mb-3 text-purple-600">
+                  <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 text-purple-600">
                     <AnimatedCounter end={25} suffix="+" />
                   </div>
-                  <p className="text-gray-700 font-medium mb-2">Applications</p>
-                  <p className="text-gray-500 text-sm">From wound healing to food packaging solutions</p>
+                  <p className="text-gray-700 font-medium mb-2 text-sm md:text-base">Applications</p>
+                  <p className="text-gray-500 text-xs md:text-sm">From wound healing to food packaging solutions</p>
                 </div>
                 
                 <div className="bg-white/90 backdrop-blur-lg rounded-2xl p-6 border border-purple-200 shadow-lg">
-                  <div className="text-4xl md:text-5xl font-bold mb-3 text-purple-600">
+                  <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 text-purple-600">
                     100%
                   </div>
-                  <p className="text-gray-700 font-medium mb-2">Halal Compliant</p>
-                  <p className="text-gray-500 text-sm">Fish-derived materials safe for all religious communities</p>
+                  <p className="text-gray-700 font-medium mb-2 text-sm md:text-base">Halal Compliant</p>
+                  <p className="text-gray-500 text-xs md:text-sm">Fish-derived materials safe for all religious communities</p>
                 </div>
               </motion.div>
             </motion.div>
@@ -863,7 +902,7 @@ export default function Applications() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent mb-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent mb-8">
               Understanding Fish-Derived Biomaterials
             </h2>
           </motion.div>
@@ -1680,8 +1719,8 @@ export default function Applications() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-8">Emerging Applications & Future Research</h2>
-            <p className="text-xl mb-12 max-w-4xl mx-auto opacity-90">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">Emerging Applications & Future Research</h2>
+            <p className="text-lg md:text-xl mb-12 max-w-4xl mx-auto opacity-90">
               The future holds even more exciting possibilities for fish waste-derived biomaterials, with ongoing research advancing 
               sustainable practices and unlocking new potential in marine resource utilization
             </p>
@@ -1797,10 +1836,10 @@ export default function Applications() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent mb-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent mb-8">
               Transforming Industries, One Application at a Time
             </h2>
-            <p className="text-xl text-gray-600 mb-12 leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-600 mb-12 leading-relaxed">
               Fish waste-derived collagen and gelatin represent the future of sustainable biomaterials, 
               offering superior performance while addressing environmental challenges across multiple industries.
             </p>

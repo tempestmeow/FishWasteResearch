@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { Fish, Target, TrendingUp, Zap, Recycle, Shield, Globe, BarChart3, PieChart, CheckCircle2, ArrowUpRight, Star, Award, Sparkles, FlaskConical, Factory, Layers, ArrowRight, ChevronDown, Clock, Settings, Beaker, Microscope, Droplet, Leaf, TreePine } from 'lucide-react';
+import { Fish, Target, TrendingUp, Zap, Recycle, Shield, Globe, BarChart3, PieChart, CheckCircle2, ArrowUpRight, Star, Award, Sparkles, FlaskConical, Factory, Layers, ArrowRight, ChevronDown, Clock, Settings, Beaker, Microscope, Droplet, Leaf, TreePine, Menu, X } from 'lucide-react';
 import Link from 'next/link';
 
 const AnimatedCounter = ({ end, duration = 2, suffix = '', prefix = '', decimals = 0 }) => {
@@ -841,6 +841,8 @@ const ComparisonChart = () => {
 };
 
 export default function Solution() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
   const products = [
     {
       name: "Collagen Sponges",
@@ -917,7 +919,9 @@ export default function Solution() {
                 <Fish className="w-8 h-8 text-emerald-600" />
                 FishSkin
               </motion.h1>
-              <div className="hidden md:flex space-x-8">
+              
+              {/* Desktop Navigation */}
+              <div className="hidden lg:flex space-x-8">
                 {['Problem', 'Science', 'Solution', 'Applications', 'Impact', 'References'].map((item, index) => (
                   <motion.div
                     key={item}
@@ -934,7 +938,42 @@ export default function Solution() {
                   </motion.div>
                 ))}
               </div>
+
+              {/* Mobile Menu Button */}
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="lg:hidden p-2 text-slate-600 hover:text-emerald-600 transition-colors"
+              >
+                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
             </nav>
+
+            {/* Mobile Navigation */}
+            {isMobileMenuOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+                className="lg:hidden mt-4 bg-white/10 backdrop-blur-lg rounded-xl border border-emerald-400/20 p-4"
+              >
+                <div className="grid grid-cols-2 gap-3">
+                  {['Problem', 'Science', 'Solution', 'Applications', 'Impact', 'References'].map((item, index) => (
+                    <Link
+                      key={item}
+                      href={item === 'Problem' ? '/' : `/${item.toLowerCase()}`}
+                      className={`block px-4 py-3 rounded-lg text-center transition-colors duration-300 ${
+                        item === 'Solution' 
+                          ? 'bg-emerald-400/20 text-emerald-600 font-medium' 
+                          : 'text-slate-600 hover:bg-white/10 hover:text-emerald-600'
+                      }`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item}
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            )}
           </motion.header>
           
           <div className="text-center">
