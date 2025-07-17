@@ -721,6 +721,41 @@ export default function Science() {
           </motion.div>
         </div>
       </section>
+
+      {/* Call to Action */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600 text-white relative z-20">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">Ready to Transform Fish Waste?</h2>
+            <p className="text-xl mb-12 leading-relaxed opacity-90">
+              Now that you understand the science behind fish waste transformation, 
+              discover the complete solution and explore the research that makes it all possible.
+            </p>
+            
+            <motion.div
+              className="flex flex-col sm:flex-row gap-6 justify-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <Link href="/solution" className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-full font-medium hover:shadow-lg transition-all">
+                See the Solution
+                <ArrowUpRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link href="/references" className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-all">
+                View References
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 } 

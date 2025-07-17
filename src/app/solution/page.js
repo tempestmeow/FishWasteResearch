@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { Fish, Target, TrendingUp, Zap, Recycle, Shield, Globe, BarChart3, PieChart, CheckCircle2, ArrowUpRight, Star, Award, Sparkles, FlaskConical, Factory, Layers, ArrowRight, ChevronDown, Clock, Settings, Beaker, Microscope, Droplet } from 'lucide-react';
+import { Fish, Target, TrendingUp, Zap, Recycle, Shield, Globe, BarChart3, PieChart, CheckCircle2, ArrowUpRight, Star, Award, Sparkles, FlaskConical, Factory, Layers, ArrowRight, ChevronDown, Clock, Settings, Beaker, Microscope, Droplet, Leaf, TreePine } from 'lucide-react';
 import Link from 'next/link';
 
 const AnimatedCounter = ({ end, duration = 2, suffix = '', prefix = '', decimals = 0 }) => {
@@ -33,14 +33,14 @@ const AnimatedCounter = ({ end, duration = 2, suffix = '', prefix = '', decimals
 
 const FloatingBubble = ({ children, delay = 0, size = "md" }) => {
   const sizeClasses = {
-    sm: "w-12 h-12",
-    md: "w-16 h-16", 
-    lg: "w-20 h-20"
+    sm: "w-6 h-6",
+    md: "w-8 h-8", 
+    lg: "w-10 h-10"
   };
 
   return (
     <motion.div
-      className={`${sizeClasses[size]} rounded-full bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center text-white shadow-lg`}
+      className={`${sizeClasses[size]} flex items-center justify-center text-emerald-500`}
       animate={{ 
         y: [-15, 15, -15],
         rotate: [0, 360, 0],
@@ -804,15 +804,15 @@ const ComparisonChart = () => {
   ];
 
   return (
-    <div className="bg-white rounded-2xl p-8 shadow-lg border border-emerald-100">
-      <h3 className="text-xl font-bold text-slate-800 mb-6 text-center">Collagen Biomaterials vs. Conventional Materials</h3>
+    <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-emerald-100">
+      <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mb-8 text-center">Collagen Biomaterials vs. Conventional Materials</h3>
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
             <tr className="border-b-2 border-emerald-200">
-              <th className="text-left py-4 px-4 font-semibold text-slate-800">Feature</th>
-              <th className="text-left py-4 px-4 font-semibold text-emerald-600">Collagen Biomaterials</th>
-              <th className="text-left py-4 px-4 font-semibold text-slate-600">Conventional Materials</th>
+              <th className="text-left py-5 px-6 font-bold text-slate-800 text-lg">Feature</th>
+              <th className="text-left py-5 px-6 font-bold text-emerald-600 text-lg">Collagen Biomaterials</th>
+              <th className="text-left py-5 px-6 font-bold text-slate-600 text-lg">Conventional Materials</th>
             </tr>
           </thead>
           <tbody>
@@ -825,15 +825,15 @@ const ComparisonChart = () => {
                 viewport={{ once: true }}
                 className="border-b border-slate-100 hover:bg-emerald-50 transition-colors"
               >
-                <td className="py-4 px-4 font-medium text-slate-700">{item.feature}</td>
-                <td className="py-4 px-4 text-emerald-700">{item.collagen}</td>
-                <td className="py-4 px-4 text-slate-600">{item.conventional}</td>
+                <td className="py-5 px-6 font-semibold text-slate-700 text-base">{item.feature}</td>
+                <td className="py-5 px-6 text-emerald-700 text-base leading-relaxed">{item.collagen}</td>
+                <td className="py-5 px-6 text-slate-600 text-base leading-relaxed">{item.conventional}</td>
               </motion.tr>
             ))}
           </tbody>
         </table>
       </div>
-      <p className="text-sm text-slate-500 mt-4 italic">
+      <p className="text-sm text-slate-500 mt-6 italic text-center">
         Comparative table highlighting the advantages of collagen biomaterials over conventional materials (Gaikwad & Kim, 2024; Qin et al., 2022).
       </p>
     </div>
@@ -888,15 +888,15 @@ export default function Solution() {
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
       {/* Floating Background Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-10">
-        <FloatingBubble delay={0} size="sm">🐟</FloatingBubble>
+        <FloatingBubble delay={0} size="sm"><Recycle className="w-6 h-6" /></FloatingBubble>
         <div className="absolute top-20 right-20">
-          <FloatingBubble delay={1} size="md">♻️</FloatingBubble>
+          <FloatingBubble delay={1} size="md"><Leaf className="w-8 h-8" /></FloatingBubble>
         </div>
         <div className="absolute bottom-32 left-16">
-          <FloatingBubble delay={2} size="lg">🌱</FloatingBubble>
+          <FloatingBubble delay={2} size="lg"><TreePine className="w-10 h-10" /></FloatingBubble>
         </div>
         <div className="absolute top-1/2 right-1/3">
-          <FloatingBubble delay={3} size="sm">⚡</FloatingBubble>
+          <FloatingBubble delay={3} size="sm"><Globe className="w-6 h-6" /></FloatingBubble>
         </div>
       </div>
 
