@@ -593,7 +593,7 @@ export default function References() {
               The research spans multiple disciplines including marine biology, biotechnology, environmental science, 
               and sustainable development to provide a comprehensive foundation for our fish waste transformation initiative.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-center">
               <Link href="/science" className="inline-flex items-center bg-white text-blue-600 px-4 md:px-6 py-3 rounded-full font-medium hover:shadow-lg transition-all text-sm md:text-base">
                 <Microscope className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                 Explore the Science
