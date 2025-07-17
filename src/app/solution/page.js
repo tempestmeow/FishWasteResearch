@@ -973,7 +973,7 @@ export default function Solution() {
                 FishSkin
               </motion.h1>
               <div className="hidden md:flex space-x-8">
-                {['Problem', 'Science', 'Solution', 'Applications', 'Impact'].map((item, index) => (
+                {['Problem', 'Science', 'Solution', 'Applications', 'Impact', 'References'].map((item, index) => (
                   <motion.div
                     key={item}
                     initial={{ opacity: 0, x: 20 }}

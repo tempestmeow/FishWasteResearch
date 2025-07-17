@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { Fish, Beaker, FlaskConical, Microscope, TestTube, ArrowRight, ChevronRight, ChevronDown, Check, ArrowUpRight, Volume2, Atom, Dna, Activity, Thermometer, Clock, Droplets, Zap } from 'lucide-react';
+import { Fish, Beaker, FlaskConical, Microscope, TestTube, ArrowRight, ChevronRight, ChevronDown, Check, ArrowUpRight, Volume2, Atom, Dna, Activity, Thermometer, Clock, Droplets, Zap, Menu, X } from 'lucide-react';
 import Link from 'next/link';
 
 const AnimatedCounter = ({ end, duration = 2, suffix = '', prefix = '' }) => {
@@ -57,20 +57,20 @@ const ProcessStep = ({ title, content, isOpen, toggleOpen, icon, index }) => {
     >
       <button 
         onClick={toggleOpen}
-        className="w-full text-left px-6 py-4 flex items-center justify-between"
+        className="w-full text-left px-4 md:px-6 py-4 flex items-center justify-between"
       >
         <div className="flex items-center">
-          <div className={`w-10 h-10 rounded-full flex items-center justify-center mr-4 ${isOpen ? 'bg-blue-500 text-white' : 'bg-blue-100 text-blue-500'}`}>
-            {icon || <span>{index + 1}</span>}
+          <div className={`w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center mr-3 md:mr-4 ${isOpen ? 'bg-blue-500 text-white' : 'bg-blue-100 text-blue-500'}`}>
+            {icon || <span className="text-sm md:text-base">{index + 1}</span>}
           </div>
-          <h3 className={`font-bold text-lg ${isOpen ? 'text-blue-700' : 'text-gray-700'}`}>
+          <h3 className={`font-bold text-base md:text-lg ${isOpen ? 'text-blue-700' : 'text-gray-700'}`}>
             {title}
           </h3>
         </div>
         <div>
           {isOpen ? 
-            <ChevronDown className={`h-5 w-5 ${isOpen ? 'text-blue-500' : 'text-gray-500'}`} /> : 
-            <ChevronRight className={`h-5 w-5 ${isOpen ? 'text-blue-500' : 'text-gray-500'}`} />
+            <ChevronDown className={`h-4 w-4 md:h-5 md:w-5 ${isOpen ? 'text-blue-500' : 'text-gray-500'}`} /> : 
+            <ChevronRight className={`h-4 w-4 md:h-5 md:w-5 ${isOpen ? 'text-blue-500' : 'text-gray-500'}`} />
           }
         </div>
       </button>
@@ -80,9 +80,9 @@ const ProcessStep = ({ title, content, isOpen, toggleOpen, icon, index }) => {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
-          className="px-6 pb-6 pt-2 text-gray-700"
+          className="px-4 md:px-6 pb-4 md:pb-6 pt-2 text-gray-700"
         >
-          <div className="border-l-2 border-blue-200 pl-6 ml-4">
+          <div className="border-l-2 border-blue-200 pl-4 md:pl-6 ml-3 md:ml-4">
             {content}
           </div>
         </motion.div>
@@ -227,6 +227,7 @@ const BiochemicalInsight = ({ title, content, icon, stats }) => (
 export default function Science() {
   const [openProcess, setOpenProcess] = useState(0);
   const [showAllReferences, setShowAllReferences] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   const extractionProcessSteps = [
     {
@@ -345,23 +346,25 @@ export default function Science() {
     <div className="min-h-screen bg-gray-50 text-gray-800">
       {/* Hero Section */}
       <section className="relative z-30 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 py-24">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-24">
           <motion.header 
-            className="mb-12"
+            className="mb-8 md:mb-12"
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <nav className="flex justify-between items-center">
               <motion.h1 
-                className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent flex items-center gap-2"
+                className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent flex items-center gap-2"
                 whileHover={{ scale: 1.05 }}
               >
-                <Fish className="w-8 h-8 text-blue-500" />
+                <Fish className="w-6 h-6 md:w-8 md:h-8 text-blue-500" />
                 FishSkin
               </motion.h1>
-              <div className="hidden md:flex space-x-8">
-                {['Problem', 'Science', 'Solution', 'Applications', 'Impact'].map((item, index) => (
+              
+              {/* Desktop Navigation */}
+              <div className="hidden lg:flex space-x-8">
+                {['Problem', 'Science', 'Solution', 'Applications', 'Impact', 'References'].map((item, index) => (
                   <motion.div
                     key={item}
                     initial={{ opacity: 0, x: 20 }}
@@ -377,10 +380,45 @@ export default function Science() {
                   </motion.div>
                 ))}
               </div>
+
+              {/* Mobile Menu Button */}
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="lg:hidden p-2 text-gray-600 hover:text-blue-600 transition-colors"
+              >
+                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
             </nav>
+
+            {/* Mobile Navigation */}
+            {isMobileMenuOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+                className="lg:hidden mt-4 bg-white rounded-xl shadow-lg border border-gray-200 p-4"
+              >
+                <div className="grid grid-cols-2 gap-3">
+                  {['Problem', 'Science', 'Solution', 'Applications', 'Impact', 'References'].map((item, index) => (
+                    <Link
+                      key={item}
+                      href={item === 'Problem' ? '/' : `/${item.toLowerCase()}`}
+                      className={`block px-4 py-3 rounded-lg text-center transition-colors duration-300 ${
+                        item === 'Science' 
+                          ? 'bg-blue-100 text-blue-600 font-medium' 
+                          : 'text-gray-600 hover:bg-gray-100 hover:text-blue-600'
+                      }`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item}
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            )}
           </motion.header>
           
-          <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -388,7 +426,7 @@ export default function Science() {
               className="flex-1"
             >
               <motion.h2 
-                className="text-4xl md:text-6xl font-bold mb-6"
+                className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.8 }}
@@ -399,7 +437,7 @@ export default function Science() {
               </motion.h2>
               
               <motion.p 
-                className="text-xl text-gray-600 mb-8 leading-relaxed"
+                className="text-lg md:text-xl text-gray-600 mb-6 md:mb-8 leading-relaxed"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 1 }}
@@ -412,37 +450,37 @@ export default function Science() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7, duration: 0.8 }}
               >
-                <Link href="#extraction-process" className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors">
+                <Link href="#extraction-process" className="inline-flex items-center bg-blue-600 text-white px-4 md:px-6 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors text-sm md:text-base">
                   Explore the Process
-                  <ArrowUpRight className="ml-2 h-5 w-5" />
+                  <ArrowUpRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
                 </Link>
               </motion.div>
             </motion.div>
             
             <motion.div 
-              className="flex-1 relative"
+              className="flex-1 relative w-full"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
             >
-              <div className="relative w-full h-96">
+              <div className="relative w-full h-64 md:h-96">
                 <div className="absolute inset-0 bg-blue-50 rounded-3xl transform -rotate-3"></div>
                 <div className="absolute inset-0 bg-gradient-to-tr from-blue-100 to-white rounded-3xl overflow-hidden">
                   <div className="absolute top-0 left-0 w-full h-full bg-[url('/backgrounds/a1.jpg')] bg-cover bg-center opacity-10"></div>
-                  <div className="relative z-10 h-full flex flex-col items-center justify-center p-8">
-                    <Beaker className="w-16 h-16 text-blue-500 mb-6" />
-                    <h3 className="text-2xl font-bold text-blue-800 mb-4 text-center">Fish Waste to Collagen</h3>
-                    <p className="text-blue-700 text-center mb-6">
+                  <div className="relative z-10 h-full flex flex-col items-center justify-center p-6 md:p-8">
+                    <Beaker className="w-12 h-12 md:w-16 md:h-16 text-blue-500 mb-4 md:mb-6" />
+                    <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-3 md:mb-4 text-center">Fish Waste to Collagen</h3>
+                    <p className="text-blue-700 text-center mb-4 md:mb-6 text-sm md:text-base">
                       Scientific transformation of marine by-products into high-value biomaterials
                     </p>
-                    <div className="grid grid-cols-2 gap-6 w-full max-w-sm">
-                      <div className="bg-white rounded-xl p-4 shadow-sm">
-                        <div className="text-3xl font-bold text-blue-600 mb-1">41.1%</div>
-                        <div className="text-sm text-gray-600">Organic matter in fish scales</div>
+                    <div className="grid grid-cols-2 gap-4 md:gap-6 w-full max-w-sm">
+                      <div className="bg-white rounded-xl p-3 md:p-4 shadow-sm">
+                        <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-1">41.1%</div>
+                        <div className="text-xs md:text-sm text-gray-600">Organic matter in fish scales</div>
                       </div>
-                      <div className="bg-white rounded-xl p-4 shadow-sm">
-                        <div className="text-3xl font-bold text-blue-600 mb-1">15-27%</div>
-                        <div className="text-sm text-gray-600">Collagen yield from fish skin</div>
+                      <div className="bg-white rounded-xl p-3 md:p-4 shadow-sm">
+                        <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-1">15-27%</div>
+                        <div className="text-xs md:text-sm text-gray-600">Collagen yield from fish skin</div>
                       </div>
                     </div>
                   </div>

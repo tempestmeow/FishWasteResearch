@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { Fish, Waves, Recycle, TreePine, Globe, BarChart3, Users, TrendingUp, Heart, Clock, Package } from 'lucide-react';
+import { Fish, AlertTriangle, Waves, Recycle, TrendingUp, ArrowRight, Globe, Factory, Users, ChevronDown, X, Menu, BarChart3, Clock, Heart, TreePine, Package } from 'lucide-react';
 import Link from 'next/link';
 
 const AnimatedCounter = ({ end, duration = 2, suffix = '', prefix = '' }) => {
@@ -24,18 +24,14 @@ const AnimatedCounter = ({ end, duration = 2, suffix = '', prefix = '' }) => {
     return () => clearInterval(timer);
   }, [end, duration]);
 
-  return (
-    <span className="font-bold text-cyan-400">
-      {prefix}{count.toLocaleString()}{suffix}
-    </span>
-  );
+  return <span>{prefix}{count.toLocaleString()}{suffix}</span>;
 };
 
 const FloatingElement = ({ children, delay = 0 }) => (
   <motion.div
     animate={{ 
-      y: [-10, 10, -10],
-      rotate: [-1, 1, -1]
+      y: [-15, 15, -15],
+      rotate: [-5, 5, -5]
     }}
     transition={{
       duration: 6,
@@ -56,28 +52,24 @@ const ProblemDetail = ({ title, content, isOpen, onClose }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
       onClick={onClose}
     >
-      <div className="absolute inset-0 bg-black/80 backdrop-blur-lg" />
       <motion.div
-        initial={{ scale: 0.8, opacity: 0 }}
+        initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.8, opacity: 0 }}
-        className="relative bg-gradient-to-br from-slate-800/90 to-blue-900/90 rounded-3xl p-8 max-w-2xl max-h-[80vh] overflow-y-auto backdrop-blur-xl border border-cyan-400/30"
+        exit={{ scale: 0.9, opacity: 0 }}
+        className="bg-white rounded-2xl p-6 md:p-8 max-w-2xl max-h-[80vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 text-cyan-400 hover:text-cyan-300 text-2xl font-bold"
-        >
-          ×
-        </button>
-        <h3 className="text-2xl font-bold mb-6 text-cyan-300">{title}</h3>
-        <div className="text-cyan-100 space-y-4">
-          {content.map((paragraph, index) => (
-            <p key={index} className="leading-relaxed">{paragraph}</p>
-          ))}
+        <div className="flex justify-between items-start mb-6">
+          <h3 className="text-2xl md:text-3xl font-bold text-red-600">{title}</h3>
+          <button onClick={onClose} className="text-gray-500 hover:text-gray-700">
+            <X className="w-6 h-6" />
+          </button>
+        </div>
+        <div className="text-gray-700 space-y-4 text-sm md:text-base">
+          {content}
         </div>
       </motion.div>
     </motion.div>
@@ -85,7 +77,8 @@ const ProblemDetail = ({ title, content, isOpen, onClose }) => {
 };
 
 export default function Home() {
-  const [activeDetail, setActiveDetail] = useState(null);
+  const [selectedProblem, setSelectedProblem] = useState(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const problemDetails = {
     environmental: {
@@ -129,33 +122,9 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen text-white overflow-hidden relative">
-      <div className="fixed inset-0 opacity-100 z-20">
-        {[...Array(75)].map((_, i) => (
-                      <motion.div
-              key={i}
-              className="absolute rounded-full bg-cyan-300 border-2 border-cyan-200"
-              style={{
-                width: Math.random() * 15 + 10 + 'px',
-                height: Math.random() * 15 + 10 + 'px',
-                left: Math.random() * 100 + '%',
-                top: Math.random() * 100 + '%',
-                boxShadow: '0 0 25px rgba(34, 211, 238, 0.6), 0 0 50px rgba(34, 211, 238, 0.3)',
-              }}
-            animate={{
-              y: [-20, -100],
-              opacity: [0, 1, 0],
-            }}
-            transition={{
-              duration: Math.random() * 3 + 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
-      </div>
-
-      <section className="relative z-30 px-6 py-6">
+    <div className="min-h-screen text-white relative overflow-hidden">
+      {/* Background with overlay */}
+      <section className="relative z-30 px-4 md:px-6 py-6">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900/85 via-blue-900/80 to-cyan-900/85 z-10"></div>
           <div 
@@ -164,117 +133,158 @@ export default function Home() {
           ></div>
         </div>
         
-        <motion.header 
-          className="relative z-30 mb-12"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <nav className="flex justify-between items-center max-w-7xl mx-auto">
-            <motion.h1 
-              className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent flex items-center gap-2"
-              whileHover={{ scale: 1.05 }}
-            >
-              <Fish className="w-8 h-8 text-cyan-400" />
-              FishSkin
-            </motion.h1>
-            <div className="hidden md:flex space-x-8">
-              {['Problem', 'Science', 'Solution', 'Applications', 'Impact'].map((item, index) => (
-                <motion.div
-                  key={item}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 + 0.5 }}
-                >
-                  <Link 
-                    href={item === 'Problem' ? '/' : `/${item.toLowerCase()}`}
-                    className={`hover:text-cyan-400 transition-colors duration-300 ${item === 'Problem' ? 'text-cyan-400' : 'text-white'}`}
-                  >
-                    {item}
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-          </nav>
-        </motion.header>
-        
-        <div className="max-w-7xl mx-auto text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+        {/* Header */}
+        <div className="max-w-7xl mx-auto relative z-30">
+          <motion.header 
+            className="mb-8 md:mb-16"
+            initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.8 }}
           >
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
-              <span className="block bg-gradient-to-r from-cyan-300 via-blue-400 to-cyan-500 bg-clip-text text-transparent">
-                Fish Waste
-              </span>
-              <span className="block text-white">Crisis</span>
-            </h1>
-            
-            <motion.p 
-              className="text-xl md:text-2xl text-cyan-100 mb-12 max-w-4xl mx-auto leading-relaxed"
+            <nav className="flex justify-between items-center">
+              <motion.h1 
+                className="text-xl md:text-2xl font-bold text-cyan-400 flex items-center gap-2"
+                whileHover={{ scale: 1.05 }}
+              >
+                <Fish className="w-6 h-6 md:w-8 md:h-8" />
+                FishSkin
+              </motion.h1>
+              
+              {/* Desktop Navigation */}
+              <div className="hidden lg:flex space-x-8">
+                {['Problem', 'Science', 'Solution', 'Applications', 'Impact', 'References'].map((item, index) => (
+                  <motion.div
+                    key={item}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 + 0.5 }}
+                  >
+                    <Link 
+                      href={item === 'Problem' ? '/' : `/${item.toLowerCase()}`}
+                      className={`hover:text-cyan-400 transition-colors duration-300 ${item === 'Problem' ? 'text-cyan-400' : 'text-white'}`}
+                    >
+                      {item}
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Mobile Menu Button */}
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="lg:hidden p-2 text-white hover:text-cyan-400 transition-colors"
+              >
+                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </nav>
+
+            {/* Mobile Navigation */}
+            {isMobileMenuOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+                className="lg:hidden mt-4 bg-white/10 backdrop-blur-lg rounded-xl border border-cyan-400/20 p-4"
+              >
+                <div className="grid grid-cols-2 gap-3">
+                  {['Problem', 'Science', 'Solution', 'Applications', 'Impact', 'References'].map((item, index) => (
+                    <Link
+                      key={item}
+                      href={item === 'Problem' ? '/' : `/${item.toLowerCase()}`}
+                      className={`block px-4 py-3 rounded-lg text-center transition-colors duration-300 ${
+                        item === 'Problem' 
+                          ? 'bg-cyan-400/20 text-cyan-400 font-medium' 
+                          : 'text-white hover:bg-white/10 hover:text-cyan-400'
+                      }`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item}
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </motion.header>
+        
+          {/* Main Hero Content */}
+          <div className="max-w-7xl mx-auto text-center relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            >
+              <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-6 leading-tight">
+                <span className="block bg-gradient-to-r from-cyan-300 via-blue-400 to-cyan-500 bg-clip-text text-transparent">
+                  Fish Waste
+                </span>
+                <span className="block text-white">Crisis</span>
+              </h1>
+              
+              <motion.p 
+                className="text-lg md:text-xl lg:text-2xl text-cyan-100 mb-12 max-w-4xl mx-auto leading-relaxed px-4"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5, duration: 1 }}
+              >
+                The Philippines faces a critical challenge in sustainable fisheries management as fish consumption surges globally
+              </motion.p>
+            </motion.div>
+
+            <motion.div 
+              className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.5, duration: 1 }}
+              transition={{ delay: 1, duration: 1 }}
             >
-              The Philippines faces a critical challenge in sustainable fisheries management as fish consumption surges globally
-            </motion.p>
-          </motion.div>
+              <FloatingElement delay={0}>
+                <motion.div 
+                  className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 md:p-8 border border-cyan-400/20"
+                  whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.15)' }}
+                >
+                  <div className="flex items-center justify-center mb-4">
+                    <TrendingUp className="w-6 h-6 md:w-8 md:h-8 text-cyan-400" />
+                  </div>
+                  <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-cyan-400">
+                    <AnimatedCounter end={13} suffix="th" />
+                  </div>
+                  <p className="text-cyan-200 text-sm md:text-base">Largest Fish Producer</p>
+                  <p className="text-xs md:text-sm text-cyan-300 mt-2">Philippines Global Ranking</p>
+                </motion.div>
+              </FloatingElement>
 
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 1 }}
-          >
-            <FloatingElement delay={0}>
-              <motion.div 
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20"
-                whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.15)' }}
-              >
-                <div className="flex items-center justify-center mb-4">
-                  <TrendingUp className="w-8 h-8 text-cyan-400" />
-                </div>
-                <div className="text-4xl md:text-5xl font-bold mb-4">
-                  <AnimatedCounter end={13} suffix="th" />
-                </div>
-                <p className="text-cyan-200">Largest Fish Producer</p>
-                <p className="text-sm text-cyan-300 mt-2">Philippines Global Ranking</p>
-              </motion.div>
-            </FloatingElement>
+              <FloatingElement delay={0.5}>
+                <motion.div 
+                  className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 md:p-8 border border-cyan-400/20"
+                  whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.15)' }}
+                >
+                  <div className="flex items-center justify-center mb-4">
+                    <BarChart3 className="w-6 h-6 md:w-8 md:h-8 text-cyan-400" />
+                  </div>
+                  <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-cyan-400">
+                    <AnimatedCounter end={4.36} suffix="M" />
+                  </div>
+                  <p className="text-cyan-200 text-sm md:text-base">Metric Tonnes</p>
+                  <p className="text-xs md:text-sm text-cyan-300 mt-2">Annual Fish Production</p>
+                </motion.div>
+              </FloatingElement>
 
-            <FloatingElement delay={0.5}>
-              <motion.div 
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20"
-                whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.15)' }}
-              >
-                <div className="flex items-center justify-center mb-4">
-                  <BarChart3 className="w-8 h-8 text-cyan-400" />
-                </div>
-                <div className="text-4xl md:text-5xl font-bold mb-4">
-                  <AnimatedCounter end={4.36} suffix="M" />
-                </div>
-                <p className="text-cyan-200">Metric Tonnes</p>
-                <p className="text-sm text-cyan-300 mt-2">Annual Fish Production</p>
-              </motion.div>
-            </FloatingElement>
-
-            <FloatingElement delay={1}>
-              <motion.div 
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20"
-                whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.15)' }}
-              >
-                <div className="flex items-center justify-center mb-4">
-                  <Recycle className="w-8 h-8 text-cyan-400" />
-                </div>
-                <div className="text-4xl md:text-5xl font-bold mb-4">
-                  <AnimatedCounter end={50} suffix="%" />
-                </div>
-                <p className="text-cyan-200">Fish Parts Wasted</p>
-                <p className="text-sm text-cyan-300 mt-2">Fins, Heads, Skin, Guts</p>
-              </motion.div>
-            </FloatingElement>
-          </motion.div>
+              <FloatingElement delay={1}>
+                <motion.div 
+                  className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 md:p-8 border border-cyan-400/20"
+                  whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.15)' }}
+                >
+                  <div className="flex items-center justify-center mb-4">
+                    <Recycle className="w-6 h-6 md:w-8 md:h-8 text-cyan-400" />
+                  </div>
+                  <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-cyan-400">
+                    <AnimatedCounter end={50} suffix="%" />
+                  </div>
+                  <p className="text-cyan-200 text-sm md:text-base">Fish Parts Wasted</p>
+                  <p className="text-xs md:text-sm text-cyan-300 mt-2">Fins, Heads, Skin, Guts</p>
+                </motion.div>
+              </FloatingElement>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -546,7 +556,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-cyan-400/20 cursor-pointer hover:border-cyan-400/40 transition-all duration-300"
                 whileHover={{ scale: 1.02, backgroundColor: 'rgba(255,255,255,0.15)' }}
-                onClick={() => setActiveDetail(key)}
+                onClick={() => setSelectedProblem(key)}
               >
                 <h3 className="text-2xl font-bold mb-4 text-cyan-300">{detail.title}</h3>
                 <p className="text-cyan-100 mb-4 line-clamp-3">
@@ -587,12 +597,12 @@ export default function Home() {
         </div>
       </section>
 
-      {activeDetail && (
+      {selectedProblem && (
         <ProblemDetail
-          title={problemDetails[activeDetail].title}
-          content={problemDetails[activeDetail].content}
+          title={problemDetails[selectedProblem].title}
+          content={problemDetails[selectedProblem].content}
           isOpen={true}
-          onClose={() => setActiveDetail(null)}
+          onClose={() => setSelectedProblem(null)}
         />
       )}
     </div>
