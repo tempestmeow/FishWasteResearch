@@ -454,12 +454,12 @@ const ImplementationMethodology = () => {
           
           <div>
             <h5 className="font-semibold text-slate-800 mb-4">Critical Success Metrics</h5>
-            <div className="grid grid-cols-1 gap-4">
+            <div className="grid grid-cols-1 gap-3 md:gap-4">
               {Object.entries(implementationPhases[activePhase].keyMetrics).map(([metric, value], index) => (
-                <div key={index} className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-lg p-4">
-                  <div className="flex justify-between items-center">
-                    <span className="font-medium text-slate-700">{metric}</span>
-                    <span className="font-bold text-emerald-600">{value}</span>
+                <div key={index} className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-lg p-3 md:p-4">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-2">
+                    <span className="font-medium text-slate-700 text-sm md:text-base">{metric}</span>
+                    <span className="font-bold text-emerald-600 text-sm md:text-base">{value}</span>
                   </div>
                 </div>
               ))}
@@ -597,39 +597,42 @@ const TechnicalSpecifications = () => {
   ];
 
   return (
-    <div className="bg-white rounded-3xl p-8 shadow-lg border border-emerald-100">
-      <div className="text-center mb-8">
-        <h3 className="text-3xl font-bold text-slate-800 mb-4">Technical Specifications & Quality Standards</h3>
-        <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+    <div className="bg-white rounded-3xl p-4 md:p-8 shadow-lg border border-emerald-100">
+      <div className="text-center mb-6 md:mb-8">
+        <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mb-4">Technical Specifications & Quality Standards</h3>
+        <p className="text-base md:text-lg text-slate-600 max-w-3xl mx-auto">
           Comprehensive technical parameters ensuring consistent, high-quality collagen production meeting international standards
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mb-8">
-        {specifications.map((spec, index) => (
-          <motion.button
-            key={index}
-            onClick={() => setActiveSpec(index)}
-            className={`p-4 rounded-xl text-left transition-all ${
-              activeSpec === index
-                ? 'bg-gradient-to-br from-emerald-500 to-teal-500 text-white shadow-lg'
-                : 'bg-emerald-50 text-emerald-700 hover:bg-emerald-100'
-            }`}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <div className="flex items-center mb-2">
-              <div className={`p-2 rounded-lg mr-3 ${
-                activeSpec === index ? 'bg-white/20' : 'bg-emerald-200'
-              }`}>
-                <div className={activeSpec === index ? 'text-white' : 'text-emerald-600'}>
-                  {spec.icon}
+      {/* Mobile: Horizontal scroll tabs, Desktop: Grid */}
+      <div className="overflow-x-auto mb-6 md:mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 min-w-max md:min-w-0">
+          {specifications.map((spec, index) => (
+            <motion.button
+              key={index}
+              onClick={() => setActiveSpec(index)}
+              className={`p-3 md:p-4 rounded-xl text-left transition-all whitespace-nowrap md:whitespace-normal ${
+                activeSpec === index
+                  ? 'bg-gradient-to-br from-emerald-500 to-teal-500 text-white shadow-lg'
+                  : 'bg-emerald-50 text-emerald-700 hover:bg-emerald-100'
+              }`}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <div className="flex items-center mb-2">
+                <div className={`p-1.5 md:p-2 rounded-lg mr-2 md:mr-3 ${
+                  activeSpec === index ? 'bg-white/20' : 'bg-emerald-200'
+                }`}>
+                  <div className={activeSpec === index ? 'text-white' : 'text-emerald-600'}>
+                    {spec.icon}
+                  </div>
                 </div>
+                <span className="font-medium text-sm md:text-base">{spec.category}</span>
               </div>
-              <span className="font-medium">{spec.category}</span>
-            </div>
-          </motion.button>
-        ))}
+            </motion.button>
+          ))}
+        </div>
       </div>
 
       <motion.div
@@ -637,26 +640,26 @@ const TechnicalSpecifications = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8"
+        className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-4 md:p-8"
       >
-        <h4 className="text-2xl font-bold text-slate-800 mb-6">
+        <h4 className="text-xl md:text-2xl font-bold text-slate-800 mb-4 md:mb-6">
           {specifications[activeSpec].category}
         </h4>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 md:gap-6">
           {specifications[activeSpec].specs.map((spec, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-xl p-6 shadow-sm border border-emerald-100"
+              className="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-emerald-100"
             >
-              <div className="flex justify-between items-start mb-3">
-                <h5 className="font-semibold text-slate-800">{spec.parameter}</h5>
-                <span className="font-bold text-emerald-600 text-lg">{spec.value}</span>
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-3 gap-2">
+                <h5 className="font-semibold text-slate-800 text-sm md:text-base">{spec.parameter}</h5>
+                <span className="font-bold text-emerald-600 text-sm md:text-lg shrink-0">{spec.value}</span>
               </div>
-              <p className="text-slate-600 text-sm">{spec.description}</p>
+              <p className="text-slate-600 text-xs md:text-sm leading-relaxed">{spec.description}</p>
             </motion.div>
           ))}
         </div>
@@ -701,65 +704,7 @@ const InteractiveChart = () => {
     { name: "Other", value: 10, color: "green-500", icon: "🔬" }
   ];
 
-  return (
-    <div className="bg-white rounded-2xl p-8 shadow-lg border border-emerald-100">
-      <h3 className="text-xl font-bold text-slate-800 mb-6 text-center">Collagen Applications Market Share</h3>
-      <div className="grid grid-cols-2 gap-8 items-center">
-        <div className="relative">
-          <div className="w-48 h-48 mx-auto">
-            <svg viewBox="0 0 42 42" className="w-full h-full">
-              <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="#e2e8f0" strokeWidth="3"/>
-              {applications.map((app, index) => {
-                const offset = applications.slice(0, index).reduce((sum, item) => sum + item.value, 0);
-                const circumference = 2 * Math.PI * 15.915;
-                const strokeDasharray = `${app.value * circumference / 100} ${circumference}`;
-                const strokeDashoffset = -offset * circumference / 100;
-                
-                return (
-                  <motion.circle
-                    key={app.name}
-                    cx="21"
-                    cy="21"
-                    r="15.915"
-                    fill="transparent"
-                    stroke={`rgb(${app.color === 'emerald-500' ? '16 185 129' : app.color === 'teal-500' ? '20 184 166' : app.color === 'cyan-500' ? '6 182 212' : '34 197 94'})`}
-                    strokeWidth="3"
-                    strokeDasharray={strokeDasharray}
-                    strokeDashoffset={strokeDashoffset}
-                    initial={{ strokeDasharray: `0 ${circumference}` }}
-                    animate={{ strokeDasharray, strokeDashoffset }}
-                    transition={{ duration: 1.5, delay: index * 0.2 }}
-                    className="cursor-pointer"
-                    onMouseEnter={() => setActiveSegment(app.name)}
-                    onMouseLeave={() => setActiveSegment(null)}
-                  />
-                );
-              })}
-            </svg>
-          </div>
-        </div>
-        <div className="space-y-3">
-          {applications.map((app) => (
-            <motion.div
-              key={app.name}
-              className={`flex items-center p-3 rounded-lg cursor-pointer transition-all ${
-                activeSegment === app.name ? 'bg-emerald-50 scale-105' : 'bg-slate-50'
-              }`}
-              whileHover={{ scale: 1.02 }}
-              onMouseEnter={() => setActiveSegment(app.name)}
-              onMouseLeave={() => setActiveSegment(null)}
-            >
-              <span className="text-2xl mr-3">{app.icon}</span>
-              <div className="flex-1">
-                <div className="font-medium text-slate-800">{app.name}</div>
-                <div className="text-sm text-slate-600">{app.value}% of market</div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
+
 };
 
 const ProductShowcase = ({ products }) => {
@@ -1192,9 +1137,11 @@ export default function Solution() {
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <InteractiveChart />
-            <ComparisonChart />
+          {/* Centered and Larger Comparison Chart */}
+          <div className="flex justify-center">
+            <div className="w-full max-w-5xl">
+              <ComparisonChart />
+            </div>
           </div>
         </div>
       </section>

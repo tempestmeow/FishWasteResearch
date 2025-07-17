@@ -91,51 +91,31 @@ const ProcessStep = ({ title, content, isOpen, toggleOpen, icon, index }) => {
   );
 };
 
-const Reference = ({ authors, year, title, journal, doi }) => (
-  <motion.div 
-    className="mb-6 border-b border-gray-100 pb-6 text-sm"
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.5 }}
-  >
-    <p className="text-gray-800 leading-relaxed">{authors} ({year}). <span className="italic">{title}</span>. <span className="font-medium">{journal}</span>.</p>
-    {doi && (
-      <a 
-        href={`https://doi.org/${doi}`} 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="text-blue-600 hover:text-blue-700 mt-2 text-xs flex items-center"
-      >
-        https://doi.org/{doi}
-        <ArrowUpRight className="h-3 w-3 ml-1" />
-      </a>
-    )}
-  </motion.div>
-);
-
 const MethodComparison = ({ methods }) => {
   const [activeMethod, setActiveMethod] = useState(methods[0].id);
   
   return (
     <div className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-lg">
-      <div className="flex border-b border-gray-200">
-        {methods.map((method) => (
-          <button
-            key={method.id}
-            className={`flex-1 py-4 px-4 text-center font-medium transition-all duration-300 ${
-              activeMethod === method.id
-                ? 'bg-blue-50 text-blue-700 border-b-2 border-blue-500'
-                : 'text-gray-600 hover:bg-gray-50'
-            }`}
-            onClick={() => setActiveMethod(method.id)}
-          >
-            {method.name}
-          </button>
-        ))}
+      {/* Mobile-friendly horizontal scrollable tabs */}
+      <div className="overflow-x-auto border-b border-gray-200">
+        <div className="flex min-w-max">
+          {methods.map((method) => (
+            <button
+              key={method.id}
+              className={`flex-none py-4 px-4 md:px-6 text-center font-medium transition-all duration-300 whitespace-nowrap ${
+                activeMethod === method.id
+                  ? 'bg-blue-50 text-blue-700 border-b-2 border-blue-500'
+                  : 'text-gray-600 hover:bg-gray-50'
+              }`}
+              onClick={() => setActiveMethod(method.id)}
+            >
+              {method.name}
+            </button>
+          ))}
+        </div>
       </div>
       
-      <div className="p-6">
+      <div className="p-4 md:p-6">
         {methods.map((method) => (
           activeMethod === method.id && (
             <motion.div
@@ -143,36 +123,38 @@ const MethodComparison = ({ methods }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="space-y-6"
+              className="space-y-4 md:space-y-6"
             >
-              <div className="flex items-start">
-                {method.icon}
-                <div className="ml-4">
-                  <h4 className="font-bold text-xl text-gray-800">{method.name}</h4>
-                  <p className="text-gray-600 text-lg leading-relaxed">{method.description}</p>
+              <div className="flex flex-col md:flex-row md:items-start">
+                <div className="flex items-center mb-4 md:mb-0 md:mr-4">
+                  {method.icon}
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-bold text-lg md:text-xl text-gray-800 mb-2">{method.name}</h4>
+                  <p className="text-gray-600 text-sm md:text-lg leading-relaxed">{method.description}</p>
                 </div>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                <div className="bg-blue-50 p-6 rounded-lg">
-                  <h5 className="font-medium text-blue-800 mb-4 text-lg">Key Benefits</h5>
-                  <ul className="space-y-3">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 mt-4 md:mt-6">
+                <div className="bg-blue-50 p-4 md:p-6 rounded-lg">
+                  <h5 className="font-medium text-blue-800 mb-3 md:mb-4 text-base md:text-lg">Key Benefits</h5>
+                  <ul className="space-y-2 md:space-y-3">
                     {method.benefits.map((benefit, i) => (
                       <li key={i} className="flex items-start">
-                        <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-700 leading-relaxed">{benefit}</span>
+                        <Check className="h-4 w-4 md:h-5 md:w-5 text-green-500 mr-2 md:mr-3 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700 leading-relaxed text-sm md:text-base">{benefit}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
                 
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h5 className="font-medium text-gray-800 mb-4 text-lg">Research Results</h5>
-                  <ul className="space-y-3 text-gray-700">
+                <div className="bg-gray-50 p-4 md:p-6 rounded-lg">
+                  <h5 className="font-medium text-gray-800 mb-3 md:mb-4 text-base md:text-lg">Research Results</h5>
+                  <ul className="space-y-2 md:space-y-3 text-gray-700">
                     {method.results.map((result, i) => (
                       <li key={i} className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0 mt-0.5" />
-                        <span className="leading-relaxed">{result}</span>
+                        <ArrowRight className="h-4 w-4 md:h-5 md:w-5 text-blue-500 mr-2 md:mr-3 flex-shrink-0 mt-0.5" />
+                        <span className="leading-relaxed text-sm md:text-base">{result}</span>
                       </li>
                     ))}
                   </ul>
@@ -180,12 +162,12 @@ const MethodComparison = ({ methods }) => {
               </div>
 
               {method.mechanism && (
-                <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-lg border border-blue-100">
-                  <h5 className="font-medium text-blue-800 mb-3 text-lg flex items-center">
-                    <Atom className="h-5 w-5 mr-2" />
+                <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-4 md:p-6 rounded-lg border border-blue-100">
+                  <h5 className="font-medium text-blue-800 mb-3 text-base md:text-lg flex items-center">
+                    <Atom className="h-4 w-4 md:h-5 md:w-5 mr-2" />
                     Molecular Mechanism
                   </h5>
-                  <p className="text-gray-700 leading-relaxed">{method.mechanism}</p>
+                  <p className="text-gray-700 leading-relaxed text-sm md:text-base">{method.mechanism}</p>
                 </div>
               )}
             </motion.div>
@@ -226,7 +208,6 @@ const BiochemicalInsight = ({ title, content, icon, stats }) => (
 
 export default function Science() {
   const [openProcess, setOpenProcess] = useState(0);
-  const [showAllReferences, setShowAllReferences] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   const extractionProcessSteps = [
@@ -738,134 +719,6 @@ export default function Science() {
             </h3>
             <MethodComparison methods={alternativeMethods} />
           </motion.div>
-        </div>
-      </section>
-
-      {/* References Section - Enhanced */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold text-gray-800 mb-8 flex items-center"
-          >
-            <FlaskConical className="w-8 h-8 mr-3 text-blue-500" />
-            Scientific References
-          </motion.h2>
-
-          <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-lg">
-            <Reference 
-              authors="Chen, L., Li, Y., Zhang, Y., & Li, L."
-              year="2022"
-              title="Collagen membrane derived from fish scales for application in bone tissue engineering"
-              journal="Polymers, 14(13), 2532"
-            />
-            
-            <Reference 
-              authors="Chinh, N. Q., Manh, V. Q., Trung, V. Q., Lam, T. D., Huynh, M. A., Tung, N. H., Trinh, N. T. N., & Hoang, T. S."
-              year="2019"
-              title="Characterization of collagen derived from tropical freshwater carp fish scale wastes and its amino acid sequence"
-              journal="Natural Product Communications, 14(7), 1934578X19866288"
-              doi="10.1177/1934578X19866288"
-            />
-            
-            {showAllReferences && (
-              <>
-                <Reference 
-                  authors="Dikel, Ç., & Yanar, Y."
-                  year="2025"
-                  title="Characterization of Acid-Soluble Collagen From By-Product Bones of European Sea Bass (Dicentrarchus labrax) and Common Carp (Cyprinus carpio)"
-                  journal="Food science & nutrition, 13(4), e70059"
-                  doi="10.1002/fsn3.70059"
-                />
-                
-                <Reference 
-                  authors="Gaikwad, S., & Kim, M. J."
-                  year="2024"
-                  title="Fish by-product collagen extraction using different methods and their application"
-                  journal="Marine Drugs, 22(2), 60"
-                  doi="10.3390/md22020060"
-                />
-                
-                <Reference 
-                  authors="Jafari, H., Lista, A., Siekapen, M. M., Ghaffari-Bohlouli, P., Nie, L., Alimoradi, H., & Shavandi, A."
-                  year="2020"
-                  title="Fish collagen: Extraction, characterization, and applications for biomaterials engineering"
-                  journal="Polymers, 12(10), 2230"
-                  doi="10.3390/polym12102230"
-                />
-                
-                <Reference 
-                  authors="Kuwahara, K., Gaikwad, S., & Kim, M. J."
-                  year="2024"
-                  title="Fish By-Product Collagen Extraction Using Different Methods and Their Application"
-                  journal="Marine Drugs, 22(2), 60"
-                  doi="10.3390/md22020060"
-                />
-                
-                <Reference 
-                  authors="Nisperos, M. J., Bacosa, H., Lumancas, G., Arellano, F., Aron, J., Baclayon, L., Bantilan, Z. C., Labares, M., Jr., & Bual, R."
-                  year="2023"
-                  title="Time-dependent demineralization of Tilapia (Oreochromis niloticus) bones using hydrochloric acid for extracellular matrix extraction"
-                  journal="Biomimetics (Basel, Switzerland), 8(2), 217"
-                  doi="10.3390/biomimetics8020217"
-                />
-                
-                <Reference 
-                  authors="Nurubhasha, R., Sampath Kumar, N. S., Thirumalasetti, S. K., Simhachalam, G., & Dirisala, V. R."
-                  year="2019"
-                  title="Extraction and characterization of collagen from the skin of Pterygoplichthys pardalis and its potential application in food industries"
-                  journal="Food Science and Biotechnology, 28(6), 1811-1817"
-                  doi="10.1007/s10068-019-00601-z"
-                />
-                
-                <Reference 
-                  authors="Petcharat, T., Sripong, K., & Phimolsiripol, Y."
-                  year="2024"
-                  title="The application of microwave and ultrasound technologies for collagen extraction"
-                  journal="Frontiers in Sustainable Food Systems, 3, 1257635"
-                  doi="10.3389/fsufs.2023.1257635"
-                />
-                
-                <Reference 
-                  authors="Qin, D., Bi, S., You, X., Wang, M., Cong, X., Yuan, C., Yu, M., Cheng, X., & Chen, X.-G."
-                  year="2022"
-                  title="Development and application of fish scale wastes as versatile natural biomaterials"
-                  journal="Chemical Engineering Journal, 428, 131102"
-                />
-                
-                <Reference 
-                  authors="Wang, L., Qu, Y., Li, W., Wang, K., & Qin, S."
-                  year="2024"
-                  title="Effects and metabolism of fish collagen sponge in repairing acute wounds of rat skin"
-                  journal="Frontiers in Bioengineering and Biotechnology, 11, 1087139"
-                  doi="10.3389/fbioe.2023.1087139"
-                />
-                
-                <Reference 
-                  authors="Zou, Y., Li, Y., Li, J., & Wang, J."
-                  year="2022"
-                  title="Impact of ultrasound on extractability of native collagen from tuna by-product and its ultrastructure and physicochemical attributes"
-                  journal="Ultrasonics Sonochemistry, 89, 106129"
-                  doi="10.1016/j.ultsonch.2022.106129"
-                />
-              </>
-            )}
-            
-            <motion.button
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
-              onClick={() => setShowAllReferences(!showAllReferences)}
-              className="mt-4 text-blue-600 hover:text-blue-700 text-sm flex items-center"
-            >
-              {showAllReferences ? 'Show fewer references' : 'View all references'}
-              <ChevronDown className={`h-4 w-4 ml-1 transition-transform duration-300 ${showAllReferences ? 'rotate-180' : ''}`} />
-            </motion.button>
-          </div>
         </div>
       </section>
     </div>

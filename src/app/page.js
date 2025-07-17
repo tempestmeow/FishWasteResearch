@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { Fish, AlertTriangle, Waves, Recycle, TrendingUp, ArrowRight, Globe, Factory, Users, ChevronDown, X, Menu, BarChart3, Clock, Heart, TreePine, Package } from 'lucide-react';
+import { Fish, AlertTriangle, Waves, Recycle, TrendingUp, ArrowRight, Globe, Factory, Users, ChevronDown, X, Menu, BarChart3, Clock, Heart, TreePine, Package, Beaker, Target } from 'lucide-react';
 import Link from 'next/link';
 
 const AnimatedCounter = ({ end, duration = 2, suffix = '', prefix = '' }) => {
@@ -593,6 +593,32 @@ export default function Home() {
               into valuable resources. The development of sustainable biotech applications offers promising pathways 
               for economic growth while protecting marine ecosystems and unlocking the hidden potential in what was once considered waste.
             </p>
+            
+            {/* Navigation buttons to Science and Solution pages */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+            >
+              <Link 
+                href="/science"
+                className="inline-flex items-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg transition-all transform hover:scale-105"
+              >
+                <Beaker className="w-5 h-5 mr-2" />
+                Discover the Science
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link 
+                href="/solution"
+                className="inline-flex items-center bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg transition-all transform hover:scale-105"
+              >
+                <Target className="w-5 h-5 mr-2" />
+                Explore the Solution
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
       </section>
