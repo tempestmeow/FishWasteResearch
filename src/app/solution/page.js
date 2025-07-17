@@ -1246,7 +1246,7 @@ export default function Solution() {
                 <Globe className="w-12 h-12 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold mb-4">Zero Waste</h3>
                 <div className="text-4xl font-bold mb-2">
-                  <AnimatedCounter end={7.3} suffix="M" decimals={1} />
+                  7.3M
                 </div>
                 <p>tonnes of fish waste transformed annually</p>
               </motion.div>
