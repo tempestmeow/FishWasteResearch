@@ -218,7 +218,7 @@ export default function Science() {
         <div className="space-y-3">
           <p>Fresh fish waste (scales, skin, or bones) is thoroughly cleaned to remove impurities like blood and mucus.</p>
           <p>Materials are cut into small pieces (typically 2-5 mm) to increase their surface area for more efficient extraction.</p>
-          <p>For bones, a demineralization step using 0.5 N hydrochloric acid (HCl) is essential to remove calcium phosphate and hydroxyapatite crystals that would interfere with collagen extraction.</p>
+          <p>For bones, a demineralization step using 0.5 N hydrochloric acid (HCl) is essential to remove calcium phosphate and hydroxyapatite crystals that would interfere with collagen extraction. (Nisperos et al., 2023)</p>
         </div>
       )
     },
@@ -229,7 +229,7 @@ export default function Science() {
         <div className="space-y-3">
           <p>The pretreated fish waste is immersed in an acidic solution, commonly 0.5 M acetic acid, at a solid-to-liquid ratio of 1:10 to 1:50.</p>
           <p>The mixture is stirred continuously at a low temperature (around 4°C) for 24-72 hours.</p>
-          <p>This low temperature prevents collagen degradation while allowing the acid to break down non-covalent bonds, making the collagen soluble.</p>
+          <p>This low temperature prevents collagen degradation while allowing the acid to break down non-covalent bonds, making the collagen soluble. (Jafari et al., 2020)</p>
         </div>
       )
     },
@@ -240,7 +240,7 @@ export default function Science() {
         <div className="space-y-3">
           <p>The solution is filtered to remove any undissolved particles.</p>
           <p>Collagen is then precipitated by adjusting the pH to 7.0 using sodium hydroxide (NaOH) or by adding sodium chloride.</p>
-          <p>This step isolates the collagen from the solution and prepares it for the final purification.</p>
+          <p>This step isolates the collagen from the solution and prepares it for the final purification. (Gaikwad & Kim, 2024)</p>
         </div>
       )
     },
@@ -251,7 +251,7 @@ export default function Science() {
         <div className="space-y-3">
           <p>The precipitated collagen is collected via centrifugation.</p>
           <p>It's washed repeatedly to remove residual acid and salts.</p>
-          <p>Finally, the collagen is freeze-dried to obtain pure collagen powder suitable for various applications.</p>
+          <p>Finally, the collagen is freeze-dried to obtain pure collagen powder suitable for various applications. (Gaikwad & Kim, 2024)</p>
         </div>
       )
     }
@@ -283,7 +283,7 @@ export default function Science() {
       id: "enzymatic",
       name: "Enzymatic Extraction",
       icon: <Dna className="h-8 w-8 text-blue-500" />,
-      description: "Employs specific proteolytic enzymes, primarily pepsin, to selectively cleave telopeptide regions of collagen molecules without damaging the central triple helix structure. This targeted approach yields higher purity collagen with preserved bioactivity.",
+      description: "Employs specific proteolytic enzymes, primarily pepsin, to selectively cleave telopeptide regions of collagen molecules without damaging the central triple helix structure. This targeted approach yields higher purity collagen with preserved bioactivity. (Gaikwad & Kim, 2024)",
       mechanism: "Pepsin specifically cleaves at hydrophobic amino acid residues (phenylalanine, leucine, methionine) located in the N- and C-terminal telopeptides. These non-helical regions contain cross-linking sites that maintain collagen fiber integrity. By removing these regions, pepsin converts insoluble collagen fibers into soluble atelocollagen while preserving the characteristic Gly-X-Y amino acid sequence of the triple helix.",
       benefits: [
         "30-45% higher extraction rates than acid-only methods with superior selectivity",
@@ -298,27 +298,6 @@ export default function Science() {
         "Improved biocompatibility with reduced inflammatory response in cell culture",
         "Better preservation of triple helix structure confirmed by circular dichroism spectroscopy",
         "Successful production of medical-grade collagen suitable for tissue engineering applications"
-      ]
-    },
-    {
-      id: "microwave",
-      name: "Microwave-Assisted Extraction",
-      icon: <Zap className="h-8 w-8 text-blue-500" />,
-      description: "Uses microwave radiation to heat the extraction medium rapidly and uniformly, creating internal pressure that disrupts cellular structures and accelerates solvent penetration. This method combines thermal and mechanical effects for enhanced extraction efficiency.",
-      mechanism: "Microwave energy (2.45 GHz) causes rapid rotation of polar molecules, particularly water, generating heat from within the tissue matrix. This internal heating creates vapor pressure that ruptures cell walls and creates pathways for solvent access. The simultaneous heating and mechanical disruption significantly accelerates the dissolution of collagen fibers.",
-      benefits: [
-        "Reduces extraction time to 5-15 minutes compared to hours with conventional methods",
-        "Uniform heating prevents hot spots that could denature collagen",
-        "Lower energy consumption per unit of extracted collagen",
-        "Can be combined with ultrasound for synergistic effects",
-        "Scalable for industrial applications"
-      ],
-      results: [
-        "Fish skin collagen extraction completed in 10 minutes vs. 24-48 hours conventionally",
-        "Maintained collagen quality with preserved amino acid composition",
-        "Energy consumption reduced by 60-80% compared to traditional heating methods",
-        "Yield comparable to or higher than conventional acid extraction",
-        "Successfully implemented for various fish species including tilapia, cod, and salmon"
       ]
     }
   ];
@@ -485,9 +464,11 @@ export default function Science() {
             <div className="flex items-center justify-center mb-6">
               <Atom className="w-10 h-10 text-blue-500 mr-3" />
               <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
-                Scientific Foundation
-              </h2>
+                Scientific Foundation 
+               </h2>
             </div>
+            <span className="text-sm md:text-base font-normal text-blue-500">  (Chinh et al., 2019; Jafari et al., 2020; Nurubhasha et al., 2019; Qin et al., 2022) </span>
+              
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Fish by-products like scales, skin, and bones, often discarded as waste, are far from valueless. These materials are rich in collagen—a vital structural protein—along with other beneficial bioactive compounds including peptides, minerals, and lipids that make them ideal for transformation into valuable products for biomedical, cosmetic, pharmaceutical, and nutraceutical industries.
             </p>
@@ -496,7 +477,7 @@ export default function Science() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <BiochemicalInsight
               title="Collagen Structure"
-              content="Fish collagen consists of three polypeptide chains arranged in a triple helix structure. Each chain contains approximately 1000 amino acids with a characteristic Gly-X-Y sequence pattern, where X is often proline and Y is often hydroxyproline."
+              content="Fish collagen consists of three polypeptide chains arranged in a triple helix structure. Each chain contains approximately 1000 amino acids with a characteristic Gly-X-Y sequence pattern, where X is often proline and Y is often hydroxyproline. (Chinh et al., 2019; Qin et al., 2022)"
               icon={<Dna className="w-6 h-6 text-blue-600" />}
               stats={[
                 { value: "33%", label: "Glycine content" },
@@ -506,7 +487,7 @@ export default function Science() {
 
             <BiochemicalInsight
               title="Molecular Weight"
-              content="Type I collagen from fish sources typically has a molecular weight of approximately 300 kDa, consisting of two α1 chains (95 kDa each) and one α2 chain (110 kDa), cross-linked by hydrogen bonds and electrostatic interactions."
+              content="Type I collagen from fish sources typically has a molecular weight of approximately 300 kDa, consisting of two α1 chains (95 kDa each) and one α2 chain (110 kDa), cross-linked by hydrogen bonds and electrostatic interactions. (Rajabimashhadi et al, 2023)"
               icon={<Microscope className="w-6 h-6 text-blue-600" />}
               stats={[
                 { value: "300 kDa", label: "Total molecular weight" },
@@ -516,7 +497,7 @@ export default function Science() {
 
             <BiochemicalInsight
               title="Thermal Properties"
-              content="Fish collagen has lower thermal stability than mammalian collagen due to lower hydroxyproline content. The denaturation temperature ranges from 15-29°C, making it suitable for applications requiring lower processing temperatures."
+              content="Fish collagen has lower thermal stability than mammalian collagen due to lower hydroxyproline content. The denaturation temperature ranges from 15-29°C, making it suitable for applications requiring lower processing temperatures. (Jafari et al., 2020)"
               icon={<Thermometer className="w-6 h-6 text-blue-600" />}
               stats={[
                 { value: "15-29°C", label: "Denaturation temp" },
@@ -560,7 +541,7 @@ export default function Science() {
                     <Beaker className="w-10 h-10 text-blue-600" />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">Rich in Collagen</h3>
+                <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">Rich in Collagen </h3>
                 <div className="space-y-4">
                   <p className="text-gray-600 leading-relaxed">Fish scales, skin, and bones are abundant sources of Type I collagen, the most common protein in vertebrates.</p>
                   <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
@@ -569,7 +550,8 @@ export default function Science() {
                       <AnimatedCounter end={41.1} suffix="%" />
                     </span>
                   </div>
-                  <p className="text-sm text-gray-500">Fish waste is a sustainable alternative to traditional collagen sources</p>
+                  <p className="text-sm text-gray-500">Fish waste is a sustainable alternative to traditional collagen sources (Chinh et al., 2019)
+                  </p>
                 </div>
               </motion.div>
             </FloatingElement>
@@ -587,18 +569,25 @@ export default function Science() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">High Yield Potential</h3>
                 <div className="space-y-4">
-                  <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
-                    <span className="text-blue-700">Fish skin yields</span>
-                    <span className="font-bold text-blue-700">15-27%</span>
-                  </div>
-                  <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
-                    <span className="text-blue-700">Fish scales yield</span>
-                    <span className="font-bold text-blue-700">3-5%</span>
-                  </div>
-                  <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
-                    <span className="text-blue-700">Fish bones yield</span>
-                    <span className="font-bold text-blue-700">0.1-5.09%</span>
-                  </div>
+                <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
+  <span className="text-blue-700">Fish skin yields</span>
+  <span className="font-bold text-blue-700">
+    15-27% <span className="text-sm font-normal">(Jafari et al., 2020)</span>
+  </span>
+</div>
+<div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
+  <span className="text-blue-700">Fish scales yield</span>
+  <span className="font-bold text-blue-700">
+    3-5% <span className="text-sm font-normal">(Kuwahara et al., 2024)</span>
+  </span>
+</div>
+<div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
+  <span className="text-blue-700">Fish bones yield</span>
+  <span className="font-bold text-blue-700">
+    0.1-5.09% <span className="text-sm font-normal">(Dikel & Yanar, 2024)</span>
+  </span>
+</div>
+
                 </div>
               </motion.div>
             </FloatingElement>
@@ -617,7 +606,7 @@ export default function Science() {
                 <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">Safer Alternative</h3>
                 <div className="space-y-4">
                   <p className="text-gray-600 leading-relaxed">Fish collagen poses no risk of transmitting zoonotic diseases like Bovine Spongiform Encephalopathy (BSE).</p>
-                  <p className="text-gray-600 leading-relaxed">Avoids religious or cultural restrictions associated with mammalian collagen sources.</p>
+                  <p className="text-gray-600 leading-relaxed">Avoids religious or cultural restrictions associated with mammalian collagen sources. (Jafari et al., 2020)</p>
                   <div className="flex items-center justify-center p-3 bg-blue-50 rounded-lg">
                     <span className="font-bold text-blue-700">Safe & Culturally Acceptable</span>
                   </div>
@@ -684,7 +673,7 @@ export default function Science() {
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <h5 className="font-medium text-blue-800 mb-2">Amino Acid Composition</h5>
+                    <h5 className="font-medium text-blue-800 mb-2">Amino Acid Composition (Chinh et al., 2019) </h5>
                     <ul className="text-gray-700 space-y-1 text-sm">
                       <li>• Glycine: ~33% (provides flexibility to triple helix)</li>
                       <li>• Proline: 11-12% (stabilizes collagen structure)</li>
@@ -693,7 +682,7 @@ export default function Science() {
                     </ul>
                   </div>
                   <div>
-                    <h5 className="font-medium text-blue-800 mb-2">Product Specifications</h5>
+                    <h5 className="font-medium text-blue-800 mb-2">Product Specifications (Chen et al., 2022)</h5>
                                          <ul className="text-gray-700 space-y-1 text-sm">
                        <li>• Purity: &gt;95% collagen content</li>
                        <li>• Molecular weight: ~300 kDa (native)</li>
