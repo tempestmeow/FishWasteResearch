@@ -734,47 +734,7 @@ export default function Solution() {
         </div>
       </section>
 
-      {/* Detailed Process Flow Section */}
-      <section className="py-20 relative z-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <ProcessFlowChart />
-          </motion.div>
-        </div>
-      </section>
 
-      {/* Technical Specifications Section */}
-      <section className="py-20 relative z-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <TechnicalSpecifications />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Implementation Methodology Section */}
-      <section className="py-20 relative z-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <ImplementationMethodology />
-          </motion.div>
-        </div>
-      </section>
 
       {/* Key Advantages */}
       <section className="py-20 bg-white/60 backdrop-blur-lg relative z-20">
