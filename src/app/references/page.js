@@ -127,11 +127,17 @@ export default function References() {
       doi: "https://doi.org/10.13170/ajas.8.3.33083"
     },
     {
-      authors: "Coppola, D., Lauritano, C., Palma Esposito, F., Riccio, G., Rizzo, C., & de Pascale, D.",
-      year: "2021",
-      title: "Fish Waste: From Problem to Valuable Resource.",
-      journal: "Marine Drugs, 19(2), 116",
-      doi: "https://doi.org/10.3390/md19020116"
+      authors: "Aliño, P., Muallil, R., Mamauag, S., Cabral, R., Celeste-Dizon, E.",
+      year: "2013",
+      title: "Status, trends and challenges in the sustainability of small-scale fisheries in the Philippines: Insights from FISHDA (Fishing Industries' Support in Handling Decisions Application) model",
+      doi: "https://www.sciencedirect.com/science/article/abs/pii/S0308597X13001929", 
+    }
+    ,
+    {
+      authors: "Baclig, C.",
+      year: "2023",
+      title: "PH post-harvest fish losses need more than band-aid solutions, gov’t told",
+      doi: "https://newsinfo.inquirer.net/1752259/ph-post-harvest-fish-losses-need-more-than-band-aid-solutions-govt-told"
     },
     {
       authors: "De Ungria, S. T., Fernandez, L. T. T., Sabado, S. E. F., Santos, J. P. E., Sararaña, A. R. B., & VinceCruz-Abeledo, C. C.",

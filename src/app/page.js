@@ -52,24 +52,28 @@ const ProblemDetail = ({ title, content, isOpen, onClose }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+      className="fixed inset-0 bg-slate-900/80 backdrop-blur-md flex items-center justify-center z-50 p-4"
       onClick={onClose}
     >
       <motion.div
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.9, opacity: 0 }}
-        className="bg-white rounded-2xl p-6 md:p-8 max-w-2xl max-h-[80vh] overflow-y-auto"
+        className="bg-slate-900/90 backdrop-blur-lg border border-cyan-400/30 rounded-2xl p-6 md:p-8 max-w-2xl max-h-[80vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex justify-between items-start mb-6">
-          <h3 className="text-2xl md:text-3xl font-bold text-red-600">{title}</h3>
-          <button onClick={onClose} className="text-gray-500 hover:text-gray-700">
+          <h3 className="text-2xl md:text-3xl font-bold text-cyan-400">{title}</h3>
+          <button onClick={onClose} className="text-cyan-300 hover:text-cyan-100 transition-colors">
             <X className="w-6 h-6" />
           </button>
         </div>
-        <div className="text-gray-700 space-y-4 text-sm md:text-base">
-          {content}
+        <div className="text-cyan-100 space-y-4 text-sm md:text-base">
+          {content.map((paragraph, index) => (
+            <p key={index} className="leading-relaxed">
+              {paragraph}
+            </p>
+          ))}
         </div>
       </motion.div>
     </motion.div>
@@ -82,7 +86,7 @@ export default function Home() {
 
   const problemDetails = {
     environmental: {
-      title: "Environmental Impact",
+      title: "Environmental Impact (Mozumder et al., 2022; Thirukumaran et al., 2022)",
       content: [
         "Fish waste disposal significantly contributes to marine pollution, with approximately 7.3 million tonnes of discards entering oceans annually worldwide.",
         "In the Philippines, improper fish waste handling leads to eutrophication of water bodies, causing harmful algal blooms that deplete oxygen levels and kill marine life.",
@@ -91,19 +95,14 @@ export default function Home() {
       ]
     },
     economic: {
-      title: "Economic Consequences",
+      title: "Economic Consequences (Baclig, 2023)",
       content: [
-        "The Philippines loses approximately $2.3 billion annually due to inefficient fish waste management and unsustainable fishing practices.",
-        "Small-scale fishermen, who comprise 85% of the fishing workforce, face reduced income as fish stocks decline due to pollution and habitat degradation.",
-        "Tourism revenue decreases by an estimated 15% in coastal areas affected by fish waste pollution, impacting local economies heavily dependent on marine tourism.",
-        "Healthcare costs increase by 20% in fishing communities due to waterborne diseases and respiratory problems caused by improper waste management.",
-        "Currently, fish waste is only converted into low-value products like animal feed or fertilizer, missing opportunities for high-value biotechnology applications."
-      ]
+      "The Philippines experiences significant annual losses with 20-40 percent of total fish caught and farmed lost due to poor post-harvest practices in the Philippines, creating substantial economic impacts across the fishing sector. Small-scale fishermen, who comprise the majority of the fishing workforce, face reduced income as inadequate post-harvest infrastructure forces them to sell catches at lower prices. Tourism revenue in coastal areas suffers when fish waste and poor handling practices affect water quality and marine ecosystems that tourists visit. Healthcare costs increase in fishing communities due to contamination from improper waste management affecting local water sources and air quality. Currently, fish waste from post-harvest losses represents missed opportunities for developing value-added products, as most processing byproducts remain underutilized rather than being converted into higher-value biotechnology applications."  ]
     },
     social: {
       title: "Social Challenges",
       content: [
-        "Fishing communities face food insecurity as fish stocks decline, affecting the primary protein source for over 50 million Filipinos.",
+        "Fishing communities face food insecurity as fish stocks decline, affecting the primary protein source for Filipinos.",
         "Traditional fishing practices are threatened, endangering cultural heritage and knowledge passed down through generations.",
         "Women in fishing communities, who typically handle fish processing and waste management, face health risks from exposure to contaminated materials.",
         "Educational opportunities for children in fishing communities are limited due to economic pressures and environmental health issues."
@@ -112,12 +111,7 @@ export default function Home() {
     sustainability: {
       title: "Sustainability Crisis",
       content: [
-        "Current fishing practices are unsustainable, with 70% of Philippine fish stocks either fully exploited or overexploited.",
-        "The lack of proper waste management systems perpetuates a cycle of environmental degradation and resource depletion.",
-        "Climate change compounds the problem, with rising sea temperatures and ocean acidification affecting fish populations and waste decomposition rates.",
-        "Without immediate intervention, fish waste management issues will worsen, potentially leading to ecosystem collapse in critical marine areas.",
-        "Over 50% of fish parts including fins, heads, skin, and guts are considered waste, yet skin and bones make up most of the fish's weight."
-      ]
+   "Current fishing practices are unsustainable, with 75% of Philippine provinces showing no significant increase in fish catch since the 2000s, suggesting municipal fish catch has stagnated over the last decade. The lack of enforced fisheries management and high exploitation rates perpetuate resource depletion throughout Philippine coastal areas. Climate change compounds these problems, with rising sea temperatures and ocean acidification affecting fish populations and marine ecosystem stability. Status, trends and challenges in the sustainability of small-scale fisheries in the Philippines: Without immediate intervention, Philippine fisheries may face collapse, as fish catch has not increased over time despite continuously increasing fishing effort and the growing number of registered fishers. Over 90% of fishers in coastal villages rely solely on municipal marine fisheries, with 61% having no alternative livelihoods other than fishing, making them vulnerable to continued resource degradation. "   ]
     }
   };
 
@@ -247,7 +241,7 @@ export default function Home() {
                   <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-cyan-400">
                     <AnimatedCounter end={13} suffix="th" />
                   </div>
-                  <p className="text-cyan-200 text-sm md:text-base">Largest Fish Producer</p>
+                  <p className="text-cyan-200 text-sm md:text-base">Largest Fish Producer (Tahiluddin & Terzi, 2021)</p>
                   <p className="text-xs md:text-sm text-cyan-300 mt-2">Philippines Global Ranking</p>
                 </motion.div>
               </FloatingElement>
@@ -263,7 +257,7 @@ export default function Home() {
                   <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-cyan-400">
                     <AnimatedCounter end={4.36} suffix="M" />
                   </div>
-                  <p className="text-cyan-200 text-sm md:text-base">Metric Tonnes</p>
+                  <p className="text-cyan-200 text-sm md:text-base">Metric Tonnes (Tahiluddin & Terzi, 2021)</p>
                   <p className="text-xs md:text-sm text-cyan-300 mt-2">Annual Fish Production</p>
                 </motion.div>
               </FloatingElement>
@@ -279,7 +273,7 @@ export default function Home() {
                   <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-cyan-400">
                     <AnimatedCounter end={50} suffix="%" />
                   </div>
-                  <p className="text-cyan-200 text-sm md:text-base">Fish Parts Wasted</p>
+                  <p className="text-cyan-200 text-sm md:text-base">Fish Parts Wasted (Mozumder et al., 2022; Thirukumaran et al., 2022)</p>
                   <p className="text-xs md:text-sm text-cyan-300 mt-2">Fins, Heads, Skin, Guts</p>
                 </motion.div>
               </FloatingElement>
@@ -323,7 +317,7 @@ export default function Home() {
             >
               <div className="flex items-center mb-6">
                 <Clock className="w-8 h-8 text-cyan-400 mr-3" />
-                <h3 className="text-2xl font-bold text-cyan-300">Historical Growth</h3>
+                <h3 className="text-2xl font-bold text-cyan-300">Historical Growth (Coppola et al., 2021)</h3>
               </div>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
@@ -421,7 +415,7 @@ export default function Home() {
             >
               <div className="flex items-center mb-6">
                 <Waves className="w-8 h-8 text-cyan-400 mr-3" />
-                <h3 className="text-2xl font-bold text-cyan-300">Global Impact</h3>
+                <h3 className="text-2xl font-bold text-cyan-300">Global Impact (Mozumder et al., 2022; Thirukumaran et al., 2022)</h3>
               </div>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
@@ -454,7 +448,7 @@ export default function Home() {
             >
               <div className="flex items-center mb-6">
                 <TreePine className="w-8 h-8 text-cyan-400 mr-3" />
-                <h3 className="text-2xl font-bold text-cyan-300">Philippines Focus</h3>
+                <h3 className="text-2xl font-bold text-cyan-300">Philippines Focus (De Ungria et al., 2023)</h3>
               </div>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
@@ -489,7 +483,7 @@ export default function Home() {
           >
             <div className="flex items-center justify-center mb-6">
               <Package className="w-8 h-8 text-cyan-400 mr-3" />
-              <h3 className="text-2xl font-bold text-cyan-300">Fish Waste Composition</h3>
+              <h3 className="text-2xl font-bold text-cyan-300">Fish Waste Composition (Asmawati et al., 2023)</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
               <div className="space-y-2">
