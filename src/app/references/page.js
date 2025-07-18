@@ -329,6 +329,58 @@ export default function References() {
     }
   ];
 
+  const applicationReferences = [
+    {
+      authors: "Alfio, V. G., Manzo, C., & Micillo, R.",
+      year: "2021",
+      title: "From Fish Waste to Value: An Overview of the Sustainable Recovery of Omega-3 for Food Supplements.",
+      journal: "Molecules, 26(4), 1002",
+      doi: "https://doi.org/10.3390/molecules26041002"
+    },
+    {
+      authors: "Asmawati, A., Fahrizal, F., Arpi, N., Amanatillah, D., & Husna, F.",
+      year: "2023",
+      title: "The characteristics of gelatin from fish waste: A review.",
+      journal: "Aceh Journal of Animal Science, 8(3), 99–107",
+      doi: "https://doi.org/10.13170/ajas.8.3.33083"
+    },
+    {
+      authors: "Campalani, C., Causin, V., Selva, M., & Perosa, A.",
+      year: "2022",
+      title: "Fish-Waste-Derived Gelatin and Carbon Dots for Biobased UV-Blocking Films.",
+      journal: "ACS Applied Materials & Interfaces, 14(30), 35148–35156",
+      doi: "https://doi.org/10.1021/acsami.2c11749"
+    },
+    {
+      authors: "Healthline",
+      year: "2020",
+      title: "Collagen vs. Gelatin: Which to Choose?",
+      journal: "Healthline",
+      doi: "https://www.healthline.com/nutrition/collagen-vs-gelatin"
+    },
+    {
+      authors: "Igielska-Kalwat, J., Kilian-Pięta, E., & Połoczańska-Godek, S.",
+      year: "2022",
+      title: "The Use of Natural Collagen Obtained from Fish Waste in Hair Styling and Care.",
+      journal: "Polymers, 14(4), 749",
+      doi: "https://doi.org/10.3390/polym14040749"
+    },
+    {
+      authors: "Nitsuwat, S., Zhang, P., Ng, K., & Fang, Z.",
+      year: "2021",
+      title: "Fish gelatin as an alternative to mammalian gelatin for food industry: A meta-analysis.",
+      journal: "LWT, 110899",
+      doi: "https://doi.org/10.1016/j.lwt.2021.110899"
+    },
+    {
+      authors: "Yang, H., Wang, H., Huang, M., Cao, G., Tao, F., Zhou, G., Shen, Q., & Yang, H.",
+      year: "2022",
+      title: "Repurposing fish waste into gelatin as a potential alternative for mammalian sources: A review.",
+      journal: "21(2), 942–963",
+      doi: "https://doi.org/10.1111/1541-4337.12920"
+    }
+  ];
+
   const impactReferences = [
     {
       authors: "BCC Research",
@@ -527,7 +579,7 @@ export default function References() {
           
           {/* Problem References */}
           <SectionToggle
-            title="Problem & Environmental Challenge"
+            title="Problem"
             icon={<Globe />}
             color="from-red-500 to-orange-500"
             delay={0.1}
@@ -541,7 +593,7 @@ export default function References() {
 
           {/* Science References */}
           <SectionToggle
-            title="Scientific Research & Methodology"
+            title="Science"
             icon={<Microscope />}
             color="from-blue-500 to-cyan-500"
             delay={0.2}
@@ -555,7 +607,7 @@ export default function References() {
 
           {/* Solution References */}
           <SectionToggle
-            title="Solution Development & Implementation"
+            title="Solution"
             icon={<Target />}
             color="from-emerald-500 to-teal-500"
             delay={0.3}
@@ -567,12 +619,26 @@ export default function References() {
             </div>
           </SectionToggle>
 
+          {/* Application References */}
+          <SectionToggle
+            title="Applications"
+            icon={<FileText />}
+            color="from-purple-500 to-pink-500"
+            delay={0.4}
+          >
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 md:gap-6">
+              {applicationReferences.map((ref, index) => (
+                <ReferenceCard key={index} reference={ref} delay={index * 0.1} />
+              ))}
+            </div>
+          </SectionToggle>
+
           {/* Impact References */}
           <SectionToggle
-            title="Impact & Market Analysis"
+            title="Impact"
             icon={<Globe />}
             color="from-amber-500 to-orange-500"
-            delay={0.4}
+            delay={0.5}
           >
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 md:gap-6">
               {impactReferences.map((ref, index) => (

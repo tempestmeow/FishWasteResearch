@@ -336,31 +336,19 @@ export default function Impact() {
     <InteractiveDetailCard
       key="waste-reduction"
       title="Dramatic Waste Reduction"
-      content="The Philippines generates approximately 1.1-1.32 million metric tons of fish waste annually. Converting even a portion of this waste into valuable biomaterials significantly reduces the volume of organic waste polluting waterways and coastal areas."
-      stats={[
-        { value: "1.32M", label: "Tonnes waste annually" },
-        { value: "100%", label: "Waste utilization potential" }
-      ]}
+      content="The Philippines generates approximately 1.1-1.32 million metric tons of fish waste annually. Converting even a portion of this waste into valuable biomaterials significantly reduces the volume of organic waste polluting waterways and coastal areas. (Islam et al., 2021; Nisperos et al., 2023)"
       icon={<Recycle />}
     />,
     <InteractiveDetailCard
       key="pollution-control"
       title="Pollution Control"
-      content="This reduction directly addresses issues like eutrophication, oxygen depletion, and harmful algal blooms that currently plague Philippine water bodies due to fish waste. Improper fish waste management is a key factor contributing to the unsustainability of Philippine fisheries."
-      stats={[
-        { value: "Zero", label: "Eutrophication risk" },
-        { value: "Clean", label: "Water bodies" }
-      ]}
+      content="This reduction directly addresses issues like eutrophication, oxygen depletion, and harmful algal blooms that currently plague Philippine water bodies due to fish waste. Improper fish waste management is a key factor contributing to the unsustainability of Philippine fisheries. (Islam et al., 2021; Nisperos et al., 2023)"
       icon={<Shield />}
     />,
     <InteractiveDetailCard
       key="circular-economy"
       title="Circular Economy Alignment"
-      content="By converting waste into valuable products, the Philippines can significantly reduce its carbon footprint associated with waste management. Life cycle assessments indicate that collagen production from fish waste generates 60-70% fewer greenhouse gas emissions compared to synthetic polymer production."
-      stats={[
-        { value: "60-70%", label: "Emission reduction" },
-        { value: "Carbon", label: "Footprint decrease" }
-      ]}
+      content="By converting waste into valuable products, the Philippines can significantly reduce its carbon footprint associated with waste management . Life cycle assessments indicate that collagen production from fish waste generates 60-70% fewer greenhouse gas emissions compared to synthetic polymer production. (Qin et al., 2022)"
       icon={<Wind />}
     />
   ];
@@ -369,41 +357,25 @@ export default function Impact() {
     <InteractiveDetailCard
       key="revenue-streams"
       title="New Revenue Streams"
-      content="What was once considered waste is now converted into high-value collagen-based biomaterials for lucrative industries like biomedical, cosmetic, pharmaceutical, and nutraceuticals. This transformation generates entirely new revenue streams."
-      stats={[
-        { value: "$2.3B", label: "Annual value potential" },
-        { value: "4 sectors", label: "Target industries" }
-      ]}
+      content="What was once considered waste is now converted into high-value collagen-based biomaterials for lucrative industries like biomedical, cosmetic, pharmaceutical, and nutraceuticals. This transformation generates entirely new revenue streams. (Nisperos et al., 2023)"
       icon={<DollarSign />}
     />,
     <InteractiveDetailCard
       key="value-addition"
       title="Value Addition"
-      content="Upcycling fish by-products fundamentally shifts their perception from waste to valuable raw materials, promoting a more circular economy where resources are maximized. This enhances the overall sustainability and profitability of the Philippine fisheries sector."
-      stats={[
-        { value: "500%", label: "Value increase" },
-        { value: "Circular", label: "Economy model" }
-      ]}
+      content="Upcycling fish by-products fundamentally shifts their perception from waste to valuable raw materials, promoting a more circular economy where resources are maximized (Nisperos et al., 2023). This enhances the overall sustainability and profitability of the Philippine fisheries sector. (Reyes & De La Cruz, 2024)."
       icon={<TrendingUp />}
     />,
     <InteractiveDetailCard
       key="job-creation"
       title="Job Creation & Entrepreneurship"
-      content="The entire upcycling process—from waste collection and initial processing to the manufacturing of refined biomaterials—creates new job opportunities across various skill levels. Incentivizing innovations at the municipal level can provide alternative sources of income for fisheries stakeholders."
-      stats={[
-        { value: "50K+", label: "New jobs created" },
-        { value: "Multiple", label: "Skill levels" }
-      ]}
+      content="The entire upcycling process—from waste collection and initial processing to the manufacturing of refined biomaterials—creates new job opportunities across various skill levels(Nisperos et al., 2023). Incentivizing innovations at the municipal level can provide alternative sources of income for fisheries stakeholders. (De Ungria et al., 2023)."
       icon={<Briefcase />}
     />,
     <InteractiveDetailCard
       key="global-market"
       title="Global Market Potential"
-      content="The export potential for Philippine fish collagen products is substantial. The global collagen market is projected to reach $6.2 billion by 2027, with Asia-Pacific representing a fast-growing region. The Philippines' strategic location, established fisheries infrastructure, and competitive production costs position it advantageously."
-      stats={[
-        { value: "$6.2B", label: "Global market 2027" },
-        { value: "25%", label: "Target market share" }
-      ]}
+      content="The export potential for Philippine fish collagen products is substantial. The global collagen market is projected to reach $6.2 billion by 2027 (BCC Research, 2022), with Asia-Pacific representing a fast-growing region. The Philippines' strategic location, established fisheries infrastructure, and competitive production costs position it advantageously."
       icon={<Globe />}
     />
   ];
@@ -412,41 +384,25 @@ export default function Impact() {
     <InteractiveDetailCard
       key="rural-development"
       title="Rural Development & Poverty Alleviation"
-      content="Collagen processing facilities can provide year-round employment opportunities that complement seasonal fishing activities, stabilizing household incomes and contributing to poverty reduction in coastal communities."
-      stats={[
-        { value: "85%", label: "Fishing workforce supported" },
-        { value: "Year-round", label: "Employment stability" }
-      ]}
+      content="Collagen processing facilities can provide year-round employment opportunities that complement seasonal fishing activities, stabilizing household incomes and contributing to poverty reduction in coastal communities. (Nisperos et al., 2023; Reyes & De La Cruz, 2024)"
       icon={<Home />}
     />,
     <InteractiveDetailCard
       key="skills-development"
       title="Skills Development & Higher-Value Employment"
-      content="The emergence of fish collagen industries creates higher-value employment opportunities, providing workers with technical training in biotechnology processes, quality control, and product development, enhancing their long-term prospects."
-      stats={[
-        { value: "15K+", label: "Workers trained" },
-        { value: "5x", label: "Income increase" }
-      ]}
+      content="The emergence of fish collagen industries creates higher-value employment opportunities, providing workers with technical training in biotechnology processes, quality control, and product development, enhancing their long-term prospects. (De Ungria et al., 2023; Nisperos et al., 2023)"
       icon={<GraduationCap />}
     />,
     <InteractiveDetailCard
       key="healthcare-access"
       title="Enhanced Healthcare Access"
-      content="Locally-produced, affordable collagen products can improve healthcare access for Filipinos. For instance, Milkfish skin, an economically significant species in the Philippines, shows potential for cost-effective skin grafting, addressing accessibility issues in resource-limited regions."
-      stats={[
-        { value: "30%", label: "Healthcare improvement" },
-        { value: "80%", label: "Cost reduction" }
-      ]}
+      content=" Locally-produced, affordable collagen products can improve healthcare access for Filipinos. For instance, Milkfish skin, an economically significant species in the Philippines, shows potential for cost-effective skin grafting, addressing accessibility issues in resource-limited regions where traditional graft materials are expensive or scarce (Ragaza & Go, 2024)."
       icon={<Heart />}
     />,
     <InteractiveDetailCard
       key="nutraceutical"
       title="Nutraceutical Benefits"
-      content="Collagen peptides from fish waste can be incorporated into dietary supplements and functional foods, addressing nutritional needs and supporting healthy aging for the Filipino population."
-      stats={[
-        { value: "100%", label: "Natural supplements" },
-        { value: "All ages", label: "Health benefits" }
-      ]}
+      content="Collagen peptides from fish waste can be incorporated into dietary supplements and functional foods, addressing nutritional needs and supporting healthy aging for the Filipino population. (Nurubhasha et al., 2019)"
       icon={<FlaskConical />}
     />
   ];
@@ -593,12 +549,12 @@ export default function Impact() {
               </motion.p>
 
               {/* Enhanced Metric Cards - Better Layout */}
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <EnhancedMetricCard
                   icon={<Waves />}
                   value="1.32M"
                   label="Tonnes Waste/Year"
-                  description="Annual fish waste generated in Philippines transformed into valuable resources"
+                  description="Annual fish waste generated in Philippines transformed into valuable resources (Islam et al., 2021)"
                   color="amber"
                   delay={0.1}
                 />
@@ -606,24 +562,16 @@ export default function Impact() {
                   icon={<TrendingUp />}
                   value="$6.2B"
                   label="Global Market"
-                  description="Collagen market projection by 2027 with Philippines positioned for leadership"
+                  description="Collagen market projection by 2027 with Philippines positioned for leadership (BCC Research, 2022)"
                   color="orange"
                   delay={0.2}
-                />
-                <EnhancedMetricCard
-                  icon={<Users />}
-                  value="50K+"
-                  label="Jobs Created"
-                  description="Employment opportunities across the complete biotech value chain"
-                  color="yellow"
-                  delay={0.3}
                 />
                 <EnhancedMetricCard
                   icon={<Leaf />}
                   value="70%"
                   label="Emission Cut"
-                  description="Reduction in greenhouse gas emissions vs synthetic alternatives"
-                  color="emerald"
+                  description="Reduction in greenhouse gas emissions vs synthetic alternatives (Qin et al., 2022)"
+                  color="green"
                   delay={0.4}
                 />
               </div>

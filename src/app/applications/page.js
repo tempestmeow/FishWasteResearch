@@ -926,7 +926,7 @@ export default function Applications() {
                   Collagen is the most abundant protein in your body, providing structural support to skin, bones, tendons, and other connective tissues. In fish waste, collagen is predominantly found in skin, scales, and bones.
                 </p>
                 <p className="leading-relaxed">
-                  Fish collagen consists of three polypeptide chains arranged in a triple helix structure, with each chain containing approximately 1,000 amino acids in a characteristic Gly-X-Y sequence pattern, where X is often proline and Y is often hydroxyproline.
+                  Fish collagen consists of three polypeptide chains arranged in a triple helix structure, with each chain containing approximately 1,000 amino acids in a characteristic Gly-X-Y sequence pattern, where X is often proline and Y is often hydroxyproline. (Collagen vs. Gelatin: Which to Choose?, 2020)
                 </p>
                 <div className="bg-purple-50 rounded-lg p-4">
                   <h4 className="font-semibold text-purple-800 mb-2">Key Properties:</h4>
@@ -958,7 +958,7 @@ export default function Applications() {
                   Gelatin is a hydrocolloid food ingredient that is essentially a cooked form of collagen. When collagen is heated and processed, its triple helix structure breaks down, creating gelatin with unique functional properties.
                 </p>
                 <p className="leading-relaxed">
-                  This transformation makes gelatin an excellent gelling agent, commonly used in the food industry as a foam-former, stabilizer, thickener, and binder in products like candies, jellies, marshmallows, yogurts, ice cream, and processed meats.
+                  This transformation makes gelatin an excellent gelling agent, commonly used in the food industry as a foam-former, stabilizer, thickener, and binder in products like candies, jellies, marshmallows, yogurts, ice cream, and processed meats. (Collagen vs. Gelatin: Which to Choose?, 2020)
                 </p>
                 <div className="bg-violet-50 rounded-lg p-4">
                   <h4 className="font-semibold text-violet-800 mb-2">Key Properties:</h4>
@@ -994,7 +994,7 @@ export default function Applications() {
                   <Shield className="w-8 h-8 text-white" />
                 </div>
                 <h4 className="font-semibold text-gray-800 mb-2">Superior Safety</h4>
-                <p className="text-gray-600 text-sm">Fish-derived materials avoid health risks associated with mammalian sources, including no risk of BSE or other zoonotic diseases.</p>
+                <p className="text-gray-600 text-sm">Fish-derived materials avoid health risks associated with mammalian sources, including no risk of BSE or other zoonotic diseases. (Jafari et al., 2020)</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-violet-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -1127,7 +1127,7 @@ export default function Applications() {
 
                 <ApplicationCard
                   title="Meat Processing"
-                  description="Essential binding and water retention properties in processed meats, sausages, and nuggets."
+                  description="Essential binding and water retention properties in processed meats, sausages, and nuggets.  (Khirzin and Fatkhorrohman, 2019; Aljawish and Chevalot, 2019, as cited in Asmawati et al., 2023)."
                   benefits={[
                     "Superior water binding in sausages",
                     "Improved texture in chicken nuggets",
@@ -1204,7 +1204,7 @@ export default function Applications() {
                   Fish waste can be upcycled into a variety of medical products with remarkable therapeutic utilities. Components from seemingly 
                   unremarkable parts like skin, scales, and bones contain valuable substances that can be processed into medical devices and 
                   pharmaceutical products. Fish collagen takes advantage of collagen's crucial role in the healing process, serving as temporary 
-                  scaffolds to aid in cell migration and tissue regeneration.
+                  scaffolds to aid in cell migration and tissue regeneration. (Brennan and Grandison, 2009, as cited in Asmawati et al., 2023)
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="bg-blue-50 rounded-lg p-4">
