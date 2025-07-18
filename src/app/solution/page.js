@@ -540,7 +540,7 @@ export default function Solution() {
       name: "Collagen Sponges",
       icon: "🧽",
       description: "Biomedical scaffolds for tissue regeneration",
-      benefits: "Complete epithelial tissue formation within 14 days, completely biodegradable and incorporated into new tissue without removal needed.",
+      benefits: "Complete epithelial tissue formation within 14 days, completely biodegradable and incorporated into new tissue without removal needed. (Jafari et al., 2020), (Wang et al., 2023)",
       stats: [
         { label: "Healing Time", value: 14, suffix: " days" },
         { label: "Success Rate", value: 95, suffix: "%" }
@@ -550,7 +550,7 @@ export default function Solution() {
       name: "Biodegradable Films", 
       icon: "🌱",
       description: "Sustainable packaging solutions",
-      benefits: "Extends fresh produce shelf life by 30-40% and completely biodegrades within 30-60 days under composting conditions.",
+      benefits: "Extends fresh produce shelf life by 30-40% and completely biodegrades within 30-60 days under composting conditions. (Chattopadhyay & Raines, 2014)",
       stats: [
         { label: "Shelf Life Extension", value: 35, suffix: "%" },
         { label: "Biodegradation", value: 45, suffix: " days" }
@@ -560,7 +560,7 @@ export default function Solution() {
       name: "Cosmetic Applications",
       icon: "✨", 
       description: "Anti-aging and skincare products",
-      benefits: "Increases skin hydration by 25-30%, improves elasticity by 15-20%, and reduces wrinkle depth by 10-15% over 8-12 weeks.",
+      benefits: "Increases skin hydration by 25-30%, improves elasticity by 15-20%, and reduces wrinkle depth by 10-15% over 8-12 weeks. (Ragaza & Go, 2024)",
       stats: [
         { label: "Hydration Increase", value: 27.5, suffix: "%", decimals: 1 },
         { label: "Elasticity Improvement", value: 17.5, suffix: "%", decimals: 1 }
@@ -570,7 +570,7 @@ export default function Solution() {
       name: "Wound Healing Patches",
       icon: "🩹",
       description: "Advanced medical treatment",
-      benefits: "Accelerates wound healing, reduces infection rates, and creates optimal environment for tissue repair with controlled drug release.",
+      benefits: "Accelerates wound healing, reduces infection rates, and creates optimal environment for tissue repair with controlled drug release. (Jadach & Mielcarek, 2024)",
       stats: [
         { label: "Healing Acceleration", value: 40, suffix: "%" },
         { label: "Infection Reduction", value: 60, suffix: "%" }
@@ -702,7 +702,7 @@ export default function Solution() {
                     <AnimatedCounter end={100} suffix="%" />
                   </div>
                   <p className="text-slate-700 font-medium mb-2">Fish Waste Utilization</p>
-                  <p className="text-slate-500 text-sm">Complete conversion of fish skin, bones, and scales into valuable collagen biomaterials</p>
+                  <p className="text-slate-500 text-sm">Complete conversion of fish skin, bones, and scales into valuable collagen biomaterials (Qin et al., 2022)</p>
                 </div>
                 
                 <div className="bg-white/90 backdrop-blur-lg rounded-2xl p-6 border border-emerald-200 shadow-lg">
@@ -710,7 +710,7 @@ export default function Solution() {
                     60-70%
                   </div>
                   <p className="text-slate-700 font-medium mb-2">Energy Reduction</p>
-                  <p className="text-slate-500 text-sm">Less energy required vs synthetic polymer production processes</p>
+                  <p className="text-slate-500 text-sm">Less energy required vs synthetic polymer production processes (Qin et al., 2022)</p>
                 </div>
                 
                 <div className="bg-white/90 backdrop-blur-lg rounded-2xl p-6 border border-emerald-200 shadow-lg">
@@ -718,7 +718,7 @@ export default function Solution() {
                     25-35°C
                   </div>
                   <p className="text-slate-700 font-medium mb-2">Processing Temperature</p>
-                  <p className="text-slate-500 text-sm">Lower denaturation temp vs mammalian collagen (39-45°C)</p>
+                  <p className="text-slate-500 text-sm">Lower denaturation temp vs mammalian collagen (39-45°C) (Jafari et al., 2020)</p>
                 </div>
                 
                 <div className="bg-white/90 backdrop-blur-lg rounded-2xl p-6 border border-emerald-200 shadow-lg">
@@ -726,7 +726,7 @@ export default function Solution() {
                     0
                   </div>
                   <p className="text-slate-700 font-medium mb-2">Zoonotic Disease Risk</p>
-                  <p className="text-slate-500 text-sm">No BSE or foot-and-mouth disease transmission risk unlike mammalian sources</p>
+                  <p className="text-slate-500 text-sm">No BSE or foot-and-mouth disease transmission risk unlike mammalian sources (Jafari et al., 2020)</p>
                 </div>
               </motion.div>
             </motion.div>
@@ -815,7 +815,7 @@ export default function Solution() {
                   <span>Cultural Restrictions</span>
                   <span className="font-bold text-2xl">NONE</span>
                 </div>
-                <ProgressBar percentage={100} label="Safety Score" color="white" />
+              <span> (Jafari et al., 2020)</span>
               </div>
             </motion.div>
 
@@ -833,11 +833,13 @@ export default function Solution() {
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span>Energy Savings</span>
-                  <span className="font-bold text-2xl">60-70%</span>
+                  <span className="font-bold text-2xl">60-70% </span>
+                  <span className="text-[.7rem] font-normal">(Jafari et al., 2022)</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span>Processing Temp</span>
                   <span className="font-bold text-2xl">25-35°C</span>
+                  <span className="text-[.7rem] font-normal">(Qin et al., 2022)</span>
                 </div>
                 <p className="text-white/90 text-sm">Fish collagen requires 60-70% less energy than synthetic polymer production</p>
               </div>
@@ -863,7 +865,8 @@ export default function Solution() {
                   <span>Waste Utilization</span>
                   <span className="font-bold text-2xl">100%</span>
                 </div>
-                <ProgressBar percentage={100} label="Sustainability Score" color="white" />
+                <span className="text-[.875rem] font-normal">(Qin et al., 2022)
+</span>
               </div>
             </motion.div>
           </div>
@@ -926,7 +929,7 @@ export default function Solution() {
                 <div className="text-4xl font-bold mb-2">
                   7.3M
                 </div>
-                <p>tonnes of fish waste transformed annually</p>
+                <p>tonnes of fish waste transformed annually (Mozumder et al., 2022; Thirukumaran et al., 2022)</p>
               </motion.div>
               
               <motion.div
