@@ -286,7 +286,7 @@ const VisualImpactShowcase = () => {
     {
       icon: <Factory className="w-16 h-16" />,
       title: "Economic Transformation",
-      description: "From waste disposal costs to $2.3B revenue generation"
+      description: "Creating economic value through waste conversion"
     },
     {
       icon: <Waves className="w-16 h-16" />,
@@ -296,7 +296,7 @@ const VisualImpactShowcase = () => {
     {
       icon: <Users className="w-16 h-16" />,
       title: "Community Empowerment",
-      description: "50,000+ new jobs and improved livelihoods"
+      description: "Job opportunities and improved livelihoods"
     },
     {
       icon: <Globe className="w-16 h-16" />,

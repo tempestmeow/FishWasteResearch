@@ -56,7 +56,7 @@ const ReferenceCard = ({ reference, delay = 0 }) => (
           rel="noopener noreferrer"
           className="text-blue-500 hover:text-blue-700 text-xs md:text-sm font-medium transition-colors"
         >
-          {reference.doi.includes('doi.org') ? 'View Publication' : `DOI: ${reference.doi}`}
+          View Publication
         </a>
       </div>
     )}
@@ -132,6 +132,13 @@ export default function References() {
       title: "Status, trends and challenges in the sustainability of small-scale fisheries in the Philippines: Insights from FISHDA (Fishing Industries' Support in Handling Decisions Application) model",
       doi: "https://www.sciencedirect.com/science/article/abs/pii/S0308597X13001929", 
     }
+     ,
+    {
+      authors: "Armin Mirzapour-Kouhdasht, Marzieh Moosavi-Nasab, Reza Yousefi, Jong-Bang Eun",
+      year: "2021",
+      title: "Effect of extraction methods on the properties of tilapia scale gelatins",
+      doi: "https://www.sciencedirect.com/science/article/abs/pii/S1878818121002486"
+    }
     ,
     {
       authors: "Baclig, C.",
@@ -173,6 +180,36 @@ export default function References() {
       title: "Resource recovery from fish waste: Prospects and the usage of intensified extraction technologies.",
       journal: "Chemosphere, 299, 134361",
       doi: "https://doi.org/10.1016/j.chemosphere.2022.134361"
+    },
+    {
+      authors: "FAO",
+      year: "2024",
+      title: "FAO Report: Global fisheries and aquaculture production reaches a new record high",
+      doi: "https://www.fao.org/newsroom/detail/fao-report-global-fisheries-and-aquaculture-production-reaches-a-new-record-high/en"
+    },
+    {
+      authors: "Gatta, P. P.",
+      year: "2022",
+      title: "The State of World Fisheries and Aquaculture 2022",
+      doi: "https://doi.org/10.4060/cc0461en"
+    },
+    {
+      authors: "Obiero, K., Meulenbroek, P., Drexler, S., Dagne, A., Akoll, P., Odong, R., Kaunda-Arara, B., Waidbacher, H.",
+      year: "2019",
+      title: "The contribution of fish to food and nutrition security in Eastern Africa: Emerging trends and future outlooks",
+      doi: "https://doi.org/10.3390/su11061636"
+    },
+    {
+      authors: "Fronthea Swastawati, Bagas Rimbayu Ardie, Romadhon, Ahmad Suhaeli Fahmi and Lukita Purnamayati",
+      year: "2022",
+      title: "The potential of milkfish (Chanos chanos) gelatin as stabilizer in ice cream production",
+      doi: "https://iopscience.iop.org/article/10.1088/1755-1315/1033/1/012062"
+    },
+    {
+      authors: "Jiawei Peng, Ye Zi, Jiamin Xu, Yulu Zheng, Shudan Huang, Yaxue Hu, Bolin Liu, Xichang Wang, Jian Zhong",
+      year: "2022",
+      title: "Effect of extraction methods on the properties of tilapia scale gelatins",
+      doi: "https://www.sciencedirect.com/science/article/abs/pii/S0141813022020256"
     }
   ];
 
@@ -247,6 +284,13 @@ export default function References() {
       journal: "Chemical Engineering Journal, 428, 131102",
       doi: ""
     },
+    {
+      authors: "Rajabimashhadi, Z., Gallo, N., Salvatore, L., Lionetto, F.",
+      year: "2023",
+      title: "Collagen Derived from Fish Industry Waste: Progresses and Challenges",
+      doi: "https://doi.org/10.3390/polym15030544",
+    }
+,    
     {
       authors: "Wang, L., Qu, Y., Li, W., Wang, K., & Qin, S.",
       year: "2024",
@@ -378,6 +422,34 @@ export default function References() {
       title: "Repurposing fish waste into gelatin as a potential alternative for mammalian sources: A review.",
       journal: "21(2), 942–963",
       doi: "https://doi.org/10.1111/1541-4337.12920"
+    },
+    {
+      authors: "Lee, V. C.",
+      year: "2023",
+      title: "Use of acellular fish skin grafts in wound healing: a literature review",
+      journal: "Wounds UK",
+      doi: "https://wounds-uk.com/journal-articles/use-of-acellular-fish-skin-grafts-in-wound-healing-a-literature-review/"
+    },
+    {
+      authors: "Fazial, F. F., Ahmad, A., & Hani, N. M.",
+      year: "2023",
+      title: "Comprehensive characterisation of tilapia fish gelatine under varied extraction conditions for the advancement of hard capsule production",
+      journal: "International Journal of Food Science & Technology, 59(1), 276–287",
+      doi: "https://doi.org/10.1111/ijfs.16802"
+    },
+    {
+      authors: "Pal, M., Singh, T., Mukta, N., & Kiran, R.",
+      year: "2024",
+      title: "An in-depth analysis of the potential for healing with fish skin bandages",
+      journal: "International Journal of Research in Medical Sciences, 12(8), 3112–3116",
+      doi: "https://doi.org/10.18203/2320-6012.ijrms20242253"
+    },
+    {
+      authors: "Fronthea Swastawati, Bagas Rimbayu Ardie, Romadhon, Fahmi, A. S., & Lukita Purnamayati",
+      year: "2022",
+      title: "The potential of milkfish (Chanos chanos) gelatin as stabilizer in ice cream production",
+      journal: "IOP Conference Series Earth and Environmental Science, 1033(1), 012062–012062",
+      doi: "https://doi.org/10.1088/1755-1315/1033/1/012062"
     }
   ];
 
