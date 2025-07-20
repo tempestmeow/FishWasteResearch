@@ -286,18 +286,17 @@ export default function Science() {
       description: "Employs specific proteolytic enzymes, primarily pepsin, to selectively cleave telopeptide regions of collagen molecules without damaging the central triple helix structure. This targeted approach yields higher purity collagen with preserved bioactivity. (Gaikwad & Kim, 2024)",
       mechanism: "Pepsin specifically cleaves at hydrophobic amino acid residues (phenylalanine, leucine, methionine) located in the N- and C-terminal telopeptides. These non-helical regions contain cross-linking sites that maintain collagen fiber integrity. By removing these regions, pepsin converts insoluble collagen fibers into soluble atelocollagen while preserving the characteristic Gly-X-Y amino acid sequence of the triple helix. (Rajabimashhadi et al., 2023)",
       benefits: [
-        "30-45% higher extraction rates than acid-only methods with superior selectivity",
-        "Preserves bioactivity and immunocompatibility by removing antigenic telopeptides",
-        "Produces atelocollagen with reduced immunogenicity for medical applications",
-        "Maintains native molecular weight distribution (300 kDa α-chains)",
-        "Compatible with subsequent cross-linking for biomaterial applications"
+        "Increased yield of soluble collagen (Yu et al., 2018).",
+        "More efficient and cost-effective process (Blanco et al., 2019).",
+        "Higher purity of the extracted collagen (Lee et al., 2022)",
+        "Reduced use of harsh chemicals (Wang et al., 2021).",
       ],
       results: [
-        "Higher purity atelocollagen with 95-98% removal of telopeptide regions",
-        "Enhanced thermal stability with denaturation temperatures of 28-32°C",
-        "Improved biocompatibility with reduced inflammatory response in cell culture",
-        "Better preservation of triple helix structure confirmed by circular dichroism spectroscopy",
-        "Successful production of medical-grade collagen suitable for tissue engineering applications"
+   "Enzyme-soluble collagen extraction yields up to 73.1% in some fish (Junianto et al., 2018).",
+   "Pepsin is the most effective enzyme for collagen extraction from fish skin (Yu et al., 2018).",
+   "Optimal extraction conditions are pH 2 and a temperature of 4-10 °C (Song et al., 2021).",
+   "Enzymatic methods yield collagen with higher purity and thermal stability (Lee et al., 2022).",
+   "ESC shows improved physicochemical and antioxidant properties (Wang et al., 2021).",
       ]
     }
   ];

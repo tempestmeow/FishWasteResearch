@@ -157,6 +157,34 @@ export default function References() {
       doi: "https://doi.org/10.21203/rs.3.rs-1413739/v1"
     },
     {
+      authors: "Halder, C. E., Das, P. P., Rahman, S. M. T., Bhoumick, L. C., Tassdik, H., Hasan, M. A., & Mithun, S. N.",
+      year: "2024",
+      title: "Occupational hazards and risks among the women in fisher communities in Cox’s Bazar and Chattogram, Bangladesh.",
+      journal: "PLoS ONE, 19(7), e0297400",
+      doi: "https://doi.org/10.1371/journal.pone.0297400"
+      },
+      {
+        authors: "Macusi, E. D., et al.",
+        year: "2021",
+        title: "Perceived Vulnerability and Climate Change Impacts on Small-Scale Fisheries in Davao Gulf, Philippines.",
+        journal: "Frontiers in Marine Science, 8, 597385",
+        doi: "https://doi.org/10.3389/fmars.2021.597385"
+        },
+        {
+          authors: "Mendoza, J. N., Prūse, B., Mattalia, G., Kochalski, S., Ciriaco, A., & Sõukand, R.",
+          year: "2022",
+          title: "Fishers’ Perspectives: the Drivers Behind the Decline in Fish Catch in Laguna Lake, Philippines.",
+          journal: "MAST. Maritime Studies/Maritime Studies, 21(4), 569–585",
+          doi: "https://doi.org/10.1007/s40152-022-00287-w"
+          },
+          {
+            authors: "Taylor, B., Ofori, K. F., Parsaeimehr, A., Evrendilek, G. A., Attarwala, T., & Ozbay, G.",
+            year: "2025",
+            title: "Exploring the complexities of seafood: from benefits to contaminants.",
+            journal: "Foods, 14(9), 1461",
+            doi: "https://doi.org/10.3390/foods14091461"
+            },
+    {
       authors: "Mozumder, M. M. H., Uddin, M. M., Schneider, P., Raiyan, M. H. I., Trisha, M. G. A., Tahsin, T. H., & Newase, S.",
       year: "2022",
       title: "Sustainable Utilization of Fishery Waste in Bangladesh—A Qualitative Study for a Circular Bioeconomy Initiative.",
@@ -305,12 +333,20 @@ export default function References() {
 
   const solutionReferences = [
     {
-      "authors": "Chattopadhyay, S., & Raines, R. T.",
-      "year": "2014",
-      "title": "Collagen-based biomaterials for wound healing",
-      "journal": "Biopolymers, 101(8), 821–833",
-      "doi": "https://doi.org/10.1002/bip.22486"
-    },
+      authors: "Bavisetty, S. C. B., et al.",
+      year: "2024",
+      title: "Ultrasonication on Collagen Yield, Physiochemical and Structural Properties from Seabass (Lates Calcarifer) Scales as Affected by Pretreatment and Extraction Conditions.",
+      journal: "Natural and Life Sciences Communications, 23(1), e2024003",
+      doi: "https://doi.org/10.12982/NLSC.2024.003"
+      },
+      {
+        authors: "Chemat, F., Rombaut, N., Sicaire, A., Meullemiestre, A., Fabiano‑Tixier, A., & Abert‑Vian, M.",
+        year: "2016",
+        title: "Ultrasound assisted extraction of food and natural products. Mechanisms, techniques, combinations, protocols and applications. A review.",
+        journal: "Ultrasonics Sonochemistry, 34, 540–560",
+        doi: "https://doi.org/10.1016/j.ultsonch.2016.06.035"
+        },
+        
     {
       authors: "Gaikwad, S., & Kim, M. J.",
       year: "2024",
@@ -340,12 +376,34 @@ export default function References() {
       doi: "https://doi.org/10.3390/biomimetics8020217"
     },
     {
+      authors: "Pan, H., Zhang, X., Ni, J., Liang, Q., Jiang, X., Zhou, Z., & Shi, W.",
+      year: "2024",
+      title: "Effects of Ultrasonic Power on the Structure and Rheological Properties of Skin Collagen from Albacore (Thunnus alalunga).",
+      journal: "Marine Drugs, 22(2), 84",
+      doi: "https://doi.org/10.3390/md22020084"
+      },
+      {
+        authors: "Petcharat, T., Benjakul, S., Karnjanapratum, S., & Nalinanon, S.",
+        year: "2020",
+        title: "Ultrasound‑assisted extraction of collagen from clown featherback (Chitala ornata) skin: yield and molecular characteristics.",
+        journal: "Journal of the Science of Food and Agriculture, 101(2), 648–658",
+        doi: "https://doi.org/10.1002/jsfa.10677"
+        },
+        
+    {
       authors: "Qin, D., Bi, S., You, X., Wang, M., Cong, X., Yuan, C., Yu, M., Cheng, X., & Chen, X.-G.",
       year: "2022",
       title: "Development and application of fish scale wastes as versatile natural biomaterials.",
       journal: "Chemical Engineering Journal, 428, 131102",
       doi: ""
     },
+    {
+      authors: "Rajabimashhadi, Z., Gallo, N., Salvatore, L., & Lionetto, F.",
+      year: "2023",
+      title: "Collagen Derived from Fish Industry Waste: Progresses and Challenges.",
+      journal: "Polymers, 15(3), 544",
+      doi: "https://doi.org/10.3390/polym15030544"
+      },
     {
       authors: "Ragaza, J. A., & Go, B. P. C.",
       year: "2024",

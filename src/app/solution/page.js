@@ -243,10 +243,10 @@ export default function Solution() {
       name: "Biodegradable Films", 
       icon: "🌱",
       description: "Sustainable packaging solutions",
-      benefits: "Extends fresh produce shelf life by 30-40% and completely biodegrades within 30-60 days under composting conditions. (Chattopadhyay & Raines, 2014)",
+      benefits: "Extends produce shelf life by achieving a 19.42% lower bacteria count (Tkaczewska et al., 2022). Biodegrades completely within 3–6 months in industrial compost (Dirpan et al., 2023).",
       stats: [
-        { label: "Shelf Life Extension", value: 35, suffix: "%" },
-        { label: "Biodegradation", value: 45, suffix: " days" }
+        { label: "", value: "", suffix: "Shelf Life Extension" },
+        { label: "", value: "", suffix: "Biodegradation" }
       ]
     },
     {

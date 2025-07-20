@@ -1734,11 +1734,9 @@ export default function Applications() {
                 className="bg-white/20 backdrop-blur-lg rounded-2xl p-8"
               >
                 <Atom className="w-12 h-12 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold mb-4">Omega-3 Supplements Revolution</h3>
+                <h3 className="text-2xl font-bold mb-4">Omega-3</h3>
                 <p className="opacity-90 leading-relaxed">
-                  Fish waste is increasingly being explored as a valuable source for producing omega-3 supplements, 
-                  turning what was once discarded into high-quality, health-boosting products with significant market potential.
-                </p>
+                Fish waste is increasingly being explored as a valuable source for producing omega-3 supplements, turning what was once discarded into high-quality, health-boosting products. However, further research is needed to ensure these omega-3 concentrates are pure, stable, safe, and easily absorbed by the body. Advancing sustainable practices and clearly communicating these benefits to consumers will be key to unlocking the full potential of fish waste and promoting a more circular, eco-friendly approach to seafood resources (Alfio et al., 2021).       </p>
               </motion.div>
               
               <motion.div
@@ -1749,10 +1747,9 @@ export default function Applications() {
                 className="bg-white/20 backdrop-blur-lg rounded-2xl p-8"
               >
                 <Microscope className="w-12 h-12 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold mb-4">Advanced Biomaterials</h3>
+                <h3 className="text-2xl font-bold mb-4">Scaffolds</h3>
                 <p className="opacity-90 leading-relaxed">
-                  Next-generation tissue engineering scaffolds and drug delivery systems with enhanced properties, 
-                  building on current success in wound healing and tissue regeneration applications.
+                These materials can be fabricated into various forms including sponges, films, membranes, hydrogels, scaffolds, and injectable matrices, each designed for specific applications based on their mechanical, biological, and chemical properties (Chattopadhyay & Raines, 2014).
                 </p>
               </motion.div>
               
@@ -1764,12 +1761,11 @@ export default function Applications() {
                 className="bg-white/20 backdrop-blur-lg rounded-2xl p-8"
               >
                 <Target className="w-12 h-12 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold mb-4">Functional Foods & Nutraceuticals</h3>
+                <h3 className="text-2xl font-bold mb-4">Nutritional supplements</h3>
                 <p className="opacity-90 leading-relaxed">
-                  Collagen peptides integrated into dietary supplements and functional foods for healthy aging, 
-                  addressing nutritional needs and supporting wellness for all age groups.
-                </p>
-              </motion.div>
+                Collagen peptides from fish waste can be incorporated into dietary supplements and functional foods, addressing nutritional needs and supporting healthy aging for the Filipino population (Nurubhasha et al., 2019).
+
+         </p>    </motion.div>
             </div>
 
             {/* Research Priorities Section */}
