@@ -1251,8 +1251,8 @@ export default function Applications() {
                   ]}
                   icon={<Shield />}
                   stats={[
-                    { value: "40%", label: "Faster healing" },
-                    { value: "60%", label: "Infection reduction" }
+                    { value: "40%", label: "Faster healing (Lee, 2023)" },
+                    { value: "2X", label: "Twice the vascularization and double the expression of antimicrobial defensin peptides (Pal et al., 2024)" }
                   ]}
                 />
                 
@@ -1268,7 +1268,7 @@ export default function Applications() {
                   ]}
                   icon={<Pill />}
                   stats={[
-                    { value: "100%", label: "Dissolution rate" },
+                    { value: "4–8 minutes", label: "Rapid dissolution at pH ≤6.8 (Fazial et al., 2023)" },
                     { value: "Enhanced", label: "Bioavailability" }
                   ]}
                 />
