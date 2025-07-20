@@ -100,18 +100,18 @@ export default function Home() {
       "The Philippines experiences significant annual losses with 20-40 percent of total fish caught and farmed lost due to poor post-harvest practices in the Philippines, creating substantial economic impacts across the fishing sector. Small-scale fishermen, who comprise the majority of the fishing workforce, face reduced income as inadequate post-harvest infrastructure forces them to sell catches at lower prices. Tourism revenue in coastal areas suffers when fish waste and poor handling practices affect water quality and marine ecosystems that tourists visit. Healthcare costs increase in fishing communities due to contamination from improper waste management affecting local water sources and air quality. Currently, fish waste from post-harvest losses represents missed opportunities for developing value-added products, as most processing byproducts remain underutilized rather than being converted into higher-value biotechnology applications."  ]
     },
     social: {
-      title: "Social Challenges",
+      title: "Social Challenges (Halder et al., 2024)",
       content: [
         "Fishing communities face food insecurity as fish stocks decline, affecting the primary protein source for Filipinos.",
         "Traditional fishing practices are threatened, endangering cultural heritage and knowledge passed down through generations.",
         "Women in fishing communities, who typically handle fish processing and waste management, face health risks from exposure to contaminated materials.",
-        "Educational opportunities for children in fishing communities are limited due to economic pressures and environmental health issues. (Halder et al., 2024)"
+        "Educational opportunities for children in fishing communities are limited due to economic pressures and environmental health issues."
       ]
     },
     sustainability: {
-      title: "Sustainability Crisis",
+      title: "Sustainability Crisis (Macusi et al., 2021)",
       content: [
-  "The current state of small-scale fisheries in the Philippines is a critical concern, with a majority of fish stocks found to be unsustainable. The total fish catch volume for most capture fisheries throughout the country has either stagnated or declined over the last three decades, contributing to poverty in many coastal communities. The lack of effective fisheries management and high exploitation rates perpetuate resource depletion. Without immediate intervention, Philippine fisheries may face collapse. The vulnerability of these communities is further highlighted by the fact that many fishers rely solely on fishing, with a lack of alternative livelihoods, making them highly susceptible to continued resource degradation (Macusi et al., 2021)."
+  "The current state of small-scale fisheries in the Philippines is a critical concern, with a majority of fish stocks found to be unsustainable. The total fish catch volume for most capture fisheries throughout the country has either stagnated or declined over the last three decades, contributing to poverty in many coastal communities. The lack of effective fisheries management and high exploitation rates perpetuate resource depletion. Without immediate intervention, Philippine fisheries may face collapse. The vulnerability of these communities is further highlighted by the fact that many fishers rely solely on fishing, with a lack of alternative livelihoods, making them highly susceptible to continued resource degradation."
 ]    }
   };
 
