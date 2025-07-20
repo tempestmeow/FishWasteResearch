@@ -595,7 +595,7 @@ export default function Solution() {
                 <Star className="w-12 h-12 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold mb-4">Energy Reduction</h3>
                 <div className="text-4xl font-bold mb-2">60-70%</div>
-                <p>less energy required vs synthetic polymer production</p>
+                <p>less energy required vs synthetic polymer production (Qin et al., 2022)</p>
               </motion.div>
               
               <motion.div
@@ -607,7 +607,7 @@ export default function Solution() {
               >
                 <Award className="w-12 h-12 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold mb-4">Market Value</h3>
-                <div className="text-4xl font-bold mb-2">$2.3B</div>
+                <div className="text-4xl font-bold mb-2">Provides</div>
                 <p>potential value creation from waste streams</p>
               </motion.div>
             </div>

@@ -262,14 +262,14 @@ export default function Science() {
       id: "ultrasound",
       name: "Ultrasound-Assisted Extraction",
       icon: <Volume2 className="h-8 w-8 text-blue-500" />,
-      description: "Utilizes high-frequency sound waves (20-100 kHz) to create cavitation bubbles that mechanically disrupt cell walls and accelerate mass transfer processes. This physical disruption enhances the penetration of extraction solvents into the tissue matrix.",
+      description: "Utilizes high-frequency sound waves (20-100 kHz) to create cavitation bubbles that mechanically disrupt cell walls and accelerate mass transfer processes. This physical disruption enhances the penetration of extraction solvents into the tissue matrix. (Bavisetty et al., 2024)",
       mechanism: "Acoustic cavitation generates microscopic bubbles that rapidly form and collapse, creating localized pressure changes up to 1000 atmospheres. These pressure waves break down cellular structures and create microchannels that facilitate solvent penetration, dramatically reducing extraction time while maintaining collagen integrity.",
       benefits: [
-        "Increases collagen yield by 270% compared to conventional acid extraction alone",
-        "Reduces processing time from 72 hours to 20-30 minutes (96% time reduction)",
-        "Requires 40-60% less chemical solvent usage",
-        "Preserves molecular weight and bioactivity of extracted collagen",
-        "Energy-efficient process with lower environmental impact"
+        "Increased yield: Studies show that ultrasound-assisted extraction (UAE) can substantially increase collagen yield compared to conventional methods (Pan et al., 2024).",
+        "Reduced processing time: UAE can dramatically reduce extraction time, with some studies showing a reduction from days to as little as 30 minutes for comparable (Petcharat et al., 2020).",
+        "Reduced solvent usage: UAE is a 'green' technology with the potential to reduce the use of chemical solvents and energy consumption (Chemat et al., 2016).",
+        "Preserved bioactivity: The process preserves the molecular weight and bioactivity of the extracted collagen (Pan et al., 2024).",
+        "Energy-efficient: It is an energy-efficient process with a lower environmental impact compared to traditional methods (Chemat et al., 2016)."
       ],
       results: [
         "Albacore tuna skin: Yield increased by 8.56% with ultrasound assistance (Wang et al., 2024)",
@@ -284,7 +284,7 @@ export default function Science() {
       name: "Enzymatic Extraction",
       icon: <Dna className="h-8 w-8 text-blue-500" />,
       description: "Employs specific proteolytic enzymes, primarily pepsin, to selectively cleave telopeptide regions of collagen molecules without damaging the central triple helix structure. This targeted approach yields higher purity collagen with preserved bioactivity. (Gaikwad & Kim, 2024)",
-      mechanism: "Pepsin specifically cleaves at hydrophobic amino acid residues (phenylalanine, leucine, methionine) located in the N- and C-terminal telopeptides. These non-helical regions contain cross-linking sites that maintain collagen fiber integrity. By removing these regions, pepsin converts insoluble collagen fibers into soluble atelocollagen while preserving the characteristic Gly-X-Y amino acid sequence of the triple helix.",
+      mechanism: "Pepsin specifically cleaves at hydrophobic amino acid residues (phenylalanine, leucine, methionine) located in the N- and C-terminal telopeptides. These non-helical regions contain cross-linking sites that maintain collagen fiber integrity. By removing these regions, pepsin converts insoluble collagen fibers into soluble atelocollagen while preserving the characteristic Gly-X-Y amino acid sequence of the triple helix. (Rajabimashhadi et al., 2023)",
       benefits: [
         "30-45% higher extraction rates than acid-only methods with superior selectivity",
         "Preserves bioactivity and immunocompatibility by removing antigenic telopeptides",
@@ -431,7 +431,7 @@ export default function Science() {
                     <Beaker className="w-12 h-12 md:w-16 md:h-16 text-blue-500 mb-4 md:mb-6" />
                     <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-3 md:mb-4 text-center">Fish Waste to Collagen</h3>
                     <p className="text-blue-700 text-center mb-4 md:mb-6 text-sm md:text-base">
-                      Scientific transformation of marine by-products into high-value biomaterials
+                      Scientific transformation of marine by-products into high-value biomaterials (Rajabimashhadi et al., 2023)
                     </p>
                     <div className="grid grid-cols-2 gap-4 md:gap-6 w-full max-w-sm">
                       <div className="bg-white rounded-xl p-3 md:p-4 shadow-sm">

@@ -119,6 +119,7 @@ export default function References() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const problemReferences = [
+    
     {
       authors: "Asmawati, A., Fahrizal, F., Arpi, N., Amanatillah, D., & Husna, F.",
       year: "2023",
@@ -161,13 +162,7 @@ export default function References() {
       title: "Sustainable Utilization of Fishery Waste in Bangladesh—A Qualitative Study for a Circular Bioeconomy Initiative.",
       journal: "Fishes, 7(2), 84",
       doi: "https://doi.org/10.3390/fishes7020084"
-    },    {
-      "authors": "Muallil, R. N., Mamauag, S. S., Cabral, R. B., Celeste-Dizon, E. O., & Aliño, P. M.",
-      "year": "2014",
-      "title": "Status, trends and challenges in the sustainability of small-scale fisheries in the Philippines: Insights from FISHDA (Fishing Industries' Support in Handling Decisions Application) model",
-      "journal": "Marine Policy, 44, 212–221",
-      "doi": "https://www.sciencedirect.com/science/article/abs/pii/S0308597X13001929?via%3Dihub"
-    },
+    },    
     {
       authors: "Tahiluddin, A., & Terzi, E.",
       year: "2021",

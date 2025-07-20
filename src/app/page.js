@@ -105,14 +105,14 @@ export default function Home() {
         "Fishing communities face food insecurity as fish stocks decline, affecting the primary protein source for Filipinos.",
         "Traditional fishing practices are threatened, endangering cultural heritage and knowledge passed down through generations.",
         "Women in fishing communities, who typically handle fish processing and waste management, face health risks from exposure to contaminated materials.",
-        "Educational opportunities for children in fishing communities are limited due to economic pressures and environmental health issues."
+        "Educational opportunities for children in fishing communities are limited due to economic pressures and environmental health issues. (Halder et al., 2024)"
       ]
     },
     sustainability: {
       title: "Sustainability Crisis",
       content: [
-   "Current fishing practices are unsustainable, with 75% of Philippine provinces showing no significant increase in fish catch since the 2000s, suggesting municipal fish catch has stagnated over the last decade. The lack of enforced fisheries management and high exploitation rates perpetuate resource depletion throughout Philippine coastal areas. Climate change compounds these problems, with rising sea temperatures and ocean acidification affecting fish populations and marine ecosystem stability. Status, trends and challenges in the sustainability of small-scale fisheries in the Philippines: Without immediate intervention, Philippine fisheries may face collapse, as fish catch has not increased over time despite continuously increasing fishing effort and the growing number of registered fishers. Over 90% of fishers in coastal villages rely solely on municipal marine fisheries, with 61% having no alternative livelihoods other than fishing, making them vulnerable to continued resource degradation. "   ]
-    }
+  "The current state of small-scale fisheries in the Philippines is a critical concern, with a majority of fish stocks found to be unsustainable. The total fish catch volume for most capture fisheries throughout the country has either stagnated or declined over the last three decades, contributing to poverty in many coastal communities. The lack of effective fisheries management and high exploitation rates perpetuate resource depletion. Without immediate intervention, Philippine fisheries may face collapse. The vulnerability of these communities is further highlighted by the fact that many fishers rely solely on fishing, with a lack of alternative livelihoods, making them highly susceptible to continued resource degradation (Macusi et al., 2021)."
+]    }
   };
 
   return (
@@ -352,6 +352,7 @@ export default function Home() {
                 <p>Essential source of nutrients and animal protein for human health</p>
                 <p>Driving increased awareness and consumption globally</p>
                 <p>Critical for food security in developing nations</p>
+                <p>(Taylor et al., 2025)</p>
               </div>
             </motion.div>
 
@@ -367,10 +368,11 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-cyan-300">Growth Drivers</h3>
               </div>
               <div className="text-cyan-100 space-y-3">
-                <p>• Rising global incomes</p>
-                <p>• Aquaculture expansion</p>
-                <p>• Health consciousness</p>
-                <p>• Population growth</p>
+                <p>Rising global incomes</p>
+                <p>Aquaculture expansion</p>
+                <p>Health consciousness</p>
+                <p>Population growth</p>
+                <p>(Mendoza et al., 2022)</p>
               </div>
             </motion.div>
           </div>
