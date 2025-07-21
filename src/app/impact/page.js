@@ -693,9 +693,9 @@ export default function Impact() {
               transition={{ delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <Link href="/applications" className="inline-flex items-center bg-white text-amber-600 px-8 py-4 rounded-full font-medium hover:shadow-lg transition-all text-lg">
-                Explore Applications
-                <ArrowRight className="ml-2 h-6 w-6" />
+              <Link href="/references" className="inline-flex items-center bg-white text-amber-600 px-8 py-4 rounded-full font-medium hover:shadow-lg transition-all text-lg">
+                <Book className="mr-2 h-6 w-6" />
+                View References
               </Link>
               <Link href="/science" className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-all text-lg">
                 Learn the Science
