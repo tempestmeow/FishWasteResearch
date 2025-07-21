@@ -263,7 +263,7 @@ export default function Science() {
       name: "Ultrasound-Assisted Extraction",
       icon: <Volume2 className="h-8 w-8 text-blue-500" />,
       description: "Utilizes high-frequency sound waves (20-100 kHz) to create cavitation bubbles that mechanically disrupt cell walls and accelerate mass transfer processes. This physical disruption enhances the penetration of extraction solvents into the tissue matrix. (Bavisetty et al., 2024)",
-      mechanism: "Acoustic cavitation generates microscopic bubbles that rapidly form and collapse, creating localized pressure changes up to 1000 atmospheres. These pressure waves break down cellular structures and create microchannels that facilitate solvent penetration, dramatically reducing extraction time while maintaining collagen integrity.",
+      mechanism: "Acoustic cavitation generates microscopic bubbles that rapidly form and collapse, creating localized pressure changes up to 1000 atmospheres. These pressure waves break down cellular structures and create microchannels that facilitate solvent penetration, dramatically reducing extraction time while maintaining collagen integrity. (Petcharat et al., 2020)",
       benefits: [
         "Increased yield: Studies show that ultrasound-assisted extraction (UAE) can substantially increase collagen yield compared to conventional methods (Pan et al., 2024).",
         "Reduced processing time: UAE can dramatically reduce extraction time, with some studies showing a reduction from days to as little as 30 minutes for comparable (Petcharat et al., 2020).",
@@ -274,9 +274,9 @@ export default function Science() {
       results: [
         "Albacore tuna skin: Yield increased by 8.56% with ultrasound assistance (Wang et al., 2024)",
         "Clown featherback skin: Yield improved from 27.18% to 57.35% (110% increase) (Petcharat et al., 2024)",
-        "Processing time reduced from 3 days to 30 minutes for equivalent yields",
-        "Maintained structural integrity with higher thermal stability (denaturation temperature increased by 3-5°C)",
-        "Enhanced amino acid profile preservation, particularly hydroxyproline content"
+        "Processing time reduced from 3 days to 30 minutes for equivalent yields (Petcharat et al., 2022).",
+        "Maintained structural integrity with higher thermal stability (denaturation temperature increased by 3-5°C) (Pan et al., 2024).",
+        "Enhanced amino acid profile preservation, particularly hydroxyproline content (Pan et al., 2024)"
       ]
     },
     {

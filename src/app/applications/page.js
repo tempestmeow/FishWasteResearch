@@ -293,7 +293,7 @@ const CompoundTable = () => {
     <div className="bg-white/90 backdrop-blur-lg rounded-3xl p-8 shadow-xl border border-purple-200">
       <div className="text-center mb-8">
         <h3 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent mb-4">
-          Compound Applications Matrix
+        Compound Applications Matrix (Alfio et al., 2021)
         </h3>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           Comprehensive overview of fish waste-derived compounds and their diverse applications across industries
@@ -574,7 +574,7 @@ const CollagenVsGelatinComparison = () => {
   return (
     <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-3xl p-8 border border-purple-200">
       <div className="text-center mb-8">
-        <h3 className="text-3xl font-bold text-purple-800 mb-4">Collagen vs. Gelatin: Understanding the Difference</h3>
+        <h3 className="text-3xl font-bold text-purple-800 mb-4">Collagen vs. Gelatin: Understanding the Difference (He et al., 2021)</h3>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           Both derived from fish waste, these compounds serve different purposes across various applications
         </p>
@@ -859,7 +859,7 @@ export default function Applications() {
                   <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 text-purple-600">
                     <AnimatedCounter end={4} />
                   </div>
-                  <p className="text-gray-700 font-medium mb-2 text-sm md:text-base">Major Industries</p>
+                  <p className="text-gray-700 font-medium mb-2 text-sm md:text-base">Major Industries (Rajabimashhadi et al., 2023)</p>
                   <p className="text-gray-500 text-xs md:text-sm">Biomedical, cosmetics, food, healthcare sectors transformed</p>
                 </div>
                 
@@ -867,7 +867,7 @@ export default function Applications() {
                   <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 text-purple-600">
                     <AnimatedCounter end={15} suffix="+" />
                   </div>
-                  <p className="text-gray-700 font-medium mb-2 text-sm md:text-base">Unique Compounds</p>
+                  <p className="text-gray-700 font-medium mb-2 text-sm md:text-base">Unique Compounds (Zhou et al., 2021)</p>
                   <p className="text-gray-500 text-xs md:text-sm">Different collagen and gelatin formulations for specific uses</p>
                 </div>
                 
@@ -875,7 +875,7 @@ export default function Applications() {
                   <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 text-purple-600">
                     <AnimatedCounter end={25} suffix="+" />
                   </div>
-                  <p className="text-gray-700 font-medium mb-2 text-sm md:text-base">Applications</p>
+                  <p className="text-gray-700 font-medium mb-2 text-sm md:text-base">Applications (Al-Nimry et al., 2021)</p>
                   <p className="text-gray-500 text-xs md:text-sm">From wound healing to food packaging solutions</p>
                 </div>
                 
@@ -883,7 +883,7 @@ export default function Applications() {
                   <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 text-purple-600">
                     100%
                   </div>
-                  <p className="text-gray-700 font-medium mb-2 text-sm md:text-base">Halal Compliant</p>
+                  <p className="text-gray-700 font-medium mb-2 text-sm md:text-base">Halal Compliant (Al-Nimry et al., 2021)</p>
                   <p className="text-gray-500 text-xs md:text-sm">Fish-derived materials safe for all religious communities</p>
                 </div>
               </motion.div>
@@ -987,7 +987,7 @@ export default function Applications() {
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>
                 <h4 className="font-semibold text-gray-800 mb-2">Religious Compliance</h4>
-                <p className="text-gray-600 text-sm">Fish gelatin provides a halal (permissible) alternative to traditional pork-based gelatin, making it suitable for Muslim consumers worldwide.</p>
+                <p className="text-gray-600 text-sm">Fish gelatin provides a halal (permissible) alternative to traditional pork-based gelatin, making it suitable for Muslim consumers worldwide. (Al-Nimry et al., 2021)</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -1001,7 +1001,7 @@ export default function Applications() {
                   <Star className="w-8 h-8 text-white" />
                 </div>
                 <h4 className="font-semibold text-gray-800 mb-2">Similar Performance</h4>
-                <p className="text-gray-600 text-sm">Research shows similar properties between poultry, fish, and pig gelatins, with fish species like tilapia and catfish showing excellent gel-forming ability.</p>
+                <p className="text-gray-600 text-sm">Research shows similar properties between poultry, fish, and pig gelatins, with fish species like tilapia and catfish showing excellent gel-forming ability. (Al-Nimry et al., 2021)</p>
               </div>
             </div>
           </motion.div>
@@ -1789,7 +1789,7 @@ export default function Applications() {
                     of fish waste in the nutraceutical industry.
                   </p>
                   <div className="bg-white/10 rounded-lg p-4">
-                    <h5 className="font-semibold mb-2">Key Research Areas:</h5>
+                    <h5 className="font-semibold mb-2">Key Research Areas (Valcarcel et al., 2021):</h5>
                     <ul className="space-y-1 text-sm opacity-80">
                       <li>• Purity optimization and contaminant removal</li>
                       <li>• Stability enhancement for longer shelf life</li>
@@ -1808,7 +1808,7 @@ export default function Applications() {
                     promoting a more circular, eco-friendly approach to seafood resources and marine sustainability.
                   </p>
                   <div className="bg-white/10 rounded-lg p-4">
-                    <h5 className="font-semibold mb-2">Implementation Goals:</h5>
+                    <h5 className="font-semibold mb-2">Implementation Goals (Penca, 2020):</h5>
                     <ul className="space-y-1 text-sm opacity-80">
                       <li>• Circular economy model development</li>
                       <li>• Consumer education and awareness</li>
