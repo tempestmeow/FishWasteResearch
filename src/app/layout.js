@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Fish Waste Crisis - Philippines Environmental Challenge",
+  title: "IsdaBest: Addressing the Fish Waste Crisis of the Philippines",
   description: "Exploring the critical fish waste management problem in the Philippines, from market realities to environmental impact and the urgent need for sustainable solutions.",
 };
 
