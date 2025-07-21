@@ -464,7 +464,7 @@ export default function Impact() {
                 whileHover={{ scale: 1.05 }}
               >
                 <Fish className="w-8 h-8 text-amber-600" />
-                FishSkin
+                IsdaBest
               </motion.h1>
               
               {/* Desktop Navigation */}

@@ -302,7 +302,7 @@ export default function Solution() {
                 whileHover={{ scale: 1.05 }}
               >
                 <Fish className="w-8 h-8 text-emerald-600" />
-                FishSkin
+                IsdaBest
               </motion.h1>
               
               {/* Desktop Navigation */}

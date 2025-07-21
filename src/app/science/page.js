@@ -318,7 +318,7 @@ export default function Science() {
                 whileHover={{ scale: 1.05 }}
               >
                 <Fish className="w-6 h-6 md:w-8 md:h-8 text-blue-500" />
-                FishSkin
+                IsdaBest
               </motion.h1>
               
               {/* Desktop Navigation */}

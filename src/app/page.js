@@ -141,7 +141,7 @@ export default function Home() {
                 whileHover={{ scale: 1.05 }}
               >
                 <Fish className="w-6 h-6 md:w-8 md:h-8" />
-                FishSkin
+                IsdaBest
               </motion.h1>
               
               {/* Desktop Navigation */}
