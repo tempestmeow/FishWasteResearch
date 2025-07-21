@@ -1818,7 +1818,7 @@ export default function Applications() {
               viewport={{ once: true }}
             >
               <Link href="/impact" className="inline-flex items-center bg-gradient-to-r from-purple-600 to-violet-600 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg transition-all">
-                See Global Impact
+                See Impact On Philippines
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link href="/science" className="inline-flex items-center border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-full font-medium hover:bg-purple-50 transition-all">

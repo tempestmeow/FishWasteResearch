@@ -93,52 +93,73 @@ const WaveAnimation = () => (
   </div>
 );
 
-const EnhancedMetricCard = ({ icon, value, label, description, color = "amber", delay = 0 }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 60, rotateY: 45 }}
-    whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.8, delay }}
-    whileHover={{ 
-      y: -15, 
-      rotateY: 5,
-      boxShadow: "0 25px 50px -12px rgba(251, 191, 36, 0.4)",
-      scale: 1.05
-    }}
-    className="bg-gradient-to-br from-white/95 to-amber-50/95 backdrop-blur-lg rounded-3xl p-6 md:p-8 shadow-2xl border border-amber-200 relative overflow-hidden group"
-  >
-    {/* Background Pattern */}
-    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-amber-200/30 to-orange-200/30 rounded-full opacity-50 transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500"></div>
-    
-    {/* Floating Icon Background */}
-    <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
-      <div className="text-4xl md:text-6xl text-amber-500">{icon}</div>
-    </div>
-    
-    <div className="relative z-10">
-      <div className="flex items-center mb-4 md:mb-6">
-        <div className={`w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-${color}-400 to-${color}-600 rounded-2xl flex items-center justify-center shadow-xl mr-3 md:mr-4 group-hover:scale-110 transition-transform duration-300`}>
-          <div className="text-white text-lg md:text-2xl">{icon}</div>
-        </div>
-        <div>
-          <div className={`text-3xl md:text-4xl font-bold text-${color}-600 mb-1`}>{value}</div>
-          <div className="text-xs md:text-sm font-semibold text-gray-600 uppercase tracking-wide">{label}</div>
-        </div>
-      </div>
-      <p className="text-gray-600 leading-relaxed text-xs md:text-sm">{description}</p>
+const colorMap = {
+  amber: {
+    from: "from-amber-400",
+    to: "to-amber-600",
+    text: "text-amber-600"
+  },
+  orange: {
+    from: "from-orange-400",
+    to: "to-orange-600",
+    text: "text-orange-600"
+  },
+  green: {
+    from: "from-green-400",
+    to: "to-green-600",
+    text: "text-green-600"
+  }
+};
+
+const EnhancedMetricCard = ({ icon, value, label, description, color = "amber", delay = 0 }) => {
+  const colors = colorMap[color] || colorMap.amber;
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 60, rotateY: 45 }}
+      whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, delay }}
+      whileHover={{ 
+        y: -15, 
+        rotateY: 5,
+        boxShadow: "0 25px 50px -12px rgba(251, 191, 36, 0.4)",
+        scale: 1.05
+      }}
+      className="bg-gradient-to-br from-white/95 to-amber-50/95 backdrop-blur-lg rounded-3xl p-6 md:p-8 shadow-2xl border border-amber-200 relative overflow-hidden group"
+    >
+      {/* Background Pattern */}
+      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-amber-200/30 to-orange-200/30 rounded-full opacity-50 transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500"></div>
       
-      {/* Progress indicator */}
-      <div className="mt-3 md:mt-4 w-full bg-amber-100 rounded-full h-2">
-        <motion.div
-          className={`h-2 bg-gradient-to-r from-${color}-400 to-${color}-600 rounded-full`}
-          initial={{ width: 0 }}
-          whileInView={{ width: "100%" }}
-          transition={{ duration: 2, delay: delay + 0.5 }}
-        />
+      {/* Floating Icon Background */}
+      <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
+        <div className="text-4xl md:text-6xl text-amber-500">{icon}</div>
       </div>
-    </div>
-  </motion.div>
-);
+      
+      <div className="relative z-10">
+        <div className="flex items-center mb-4 md:mb-6">
+          <div className={`w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br ${colors.from} ${colors.to} rounded-2xl flex items-center justify-center shadow-xl mr-3 md:mr-4 group-hover:scale-110 transition-transform duration-300`}>
+            <div className="text-white text-lg md:text-2xl">{icon}</div>
+          </div>
+          <div>
+            <div className={`text-3xl md:text-4xl font-bold ${colors.text} mb-1`}>{value}</div>
+            <div className="text-xs md:text-sm font-semibold text-gray-600 uppercase tracking-wide">{label}</div>
+          </div>
+        </div>
+        <p className="text-gray-600 leading-relaxed text-xs md:text-sm">{description}</p>
+        
+        {/* Progress indicator */}
+        <div className="mt-3 md:mt-4 w-full bg-amber-100 rounded-full h-2">
+          <motion.div
+            className={`h-2 bg-gradient-to-r ${colors.from} ${colors.to} rounded-full`}
+            initial={{ width: 0 }}
+            whileInView={{ width: "100%" }}
+            transition={{ duration: 2, delay: delay + 0.5 }}
+          />
+        </div>
+      </div>
+    </motion.div>
+  );
+};
 
 const ExpandableSection = ({ title, subtitle, icon, children, delay = 0 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
