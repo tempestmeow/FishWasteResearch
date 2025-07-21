@@ -306,7 +306,7 @@ export default function References() {
       year: "2022",
       title: "Development and application of fish scale wastes as versatile natural biomaterials.",
       journal: "Chemical Engineering Journal, 428, 131102",
-      doi: ""
+      doi: "https://doi.org/10.1016/j.cej.2021.131102"
     },
     {
       authors: "Rajabimashhadi, Z., Gallo, N., Salvatore, L., Lionetto, F.",
@@ -314,7 +314,16 @@ export default function References() {
       title: "Collagen Derived from Fish Industry Waste: Progresses and Challenges",
       doi: "https://doi.org/10.3390/polym15030544",
     }
-,    
+    
+,   
+{
+  authors: "Song, Z., Liu, H., Chen, L., Chen, L., Zhou, C., Hong, P., & Deng, C.",
+  year: "2020",
+  title: "Characterization and comparison of collagen extracted from the skin of the Nile tilapia by fermentation and chemical pretreatment",
+  journal: "Food Chemistry",
+  doi: "https://doi.org/10.1016/j.foodchem.2020.128139"
+}
+,
     {
       authors: "Wang, L., Qu, Y., Li, W., Wang, K., & Qin, S.",
       year: "2024",
@@ -367,7 +376,9 @@ export default function References() {
       title: "Use of Collagen in Cosmetic Products.",
       journal: "Current Issues in Molecular Biology, 46(3), 2043-2070",
       doi: "https://doi.org/10.3390/cimb46030132"
-    },
+    }
+,    
+
     {
       authors: "Nisperos, M. J., Bacosa, H., Lumancas, G., Arellano, F., Aron, J., Baclayon, L., Bantilan, Z. C., Labares, M., Jr., & Bual, R.",
       year: "2023",
@@ -458,6 +469,20 @@ export default function References() {
       doi: "https://doi.org/10.1021/acsami.2c11749"
     },
     {
+      authors: "Cooney, R., Baptista de Sousa, D. A., Fernández, A., Mellett, S., Rowan, N., Morse, A. P., Hayes, M., Laso, J., Regueiro, L., Wan, A. H., & Clifford, E.",
+      year: "2023",
+      title: "A circular economy framework for seafood waste valorisation to meet challenges and opportunities for intensive sustainability",
+      journal: "Journal of Cleaner Production",
+      doi: ""
+    },
+    {
+      authors: "De Ungria, S. T., Fernandez, L. T. T., Sabado, S. E. F., Santos, J. P. E., Sararaña, A. R. B., & Abeledo, C. C. V.",
+      year: "2023",
+      title: "How is fish market waste managed in the Philippines?",
+      journal: "Environmental Science and Pollution Research, 30(17), 49512-49522",
+      doi: "https://doi.org/10.1007/s11356-023-25882-0"
+    },
+    {
       authors: "Healthline",
       year: "2020",
       title: "Collagen vs. Gelatin: Which to Choose?",
@@ -471,20 +496,103 @@ export default function References() {
       journal: "Polymers",
       doi: "https://doi.org/10.3390/polym13142299"
     },
+          {
+        authors: "Hsu, W.-H., et al.",
+        year: "2021",
+        title: "Fish-based gelatin: exploring a sustainable and halal alternative",
+        journal: "ResearchGate",
+        doi: ""
+      }
+    ,
     {
       authors: "Igielska-Kalwat, J., Kilian-Pięta, E., & Połoczańska-Godek, S.",
       year: "2022",
       title: "The Use of Natural Collagen Obtained from Fish Waste in Hair Styling and Care.",
       journal: "Polymers, 14(4), 749",
       doi: "https://doi.org/10.3390/polym14040749"
+    },{
+      authors: "Jadach, B., Mielcarek, Z., & Osmałek, T.",
+      year: "2024",
+      title: "Use of Collagen in Cosmetic Products.",
+      journal: "Current Issues in Molecular Biology, 46(3), 2043-2070",
+      doi: "https://doi.org/10.3390/cimb46030132"
+    }
+,    {
+  authors: "Kester, S.",
+  year: "2020",
+  title: "Benefits (and Side Effects) of Collagen Injections",
+  journal: "Healthline",
+  doi: "https://www.healthline.com/health/collagen-injections#where-to-use"
+}
+,
+    {
+      authors: "Kulkarni, P., & Maniyar, M. G.",
+      year: "2020",
+      title: "Utilization of fish collagen in pharmaceutical and biomedical industries: Waste to wealth creation",
+      journal: "Research Journal of Life Sciences Bioinformatics Pharmaceutical and Chemical Sciences",
+      doi: ""
     },
+    {
+      authors: "Martins, E., Reis, R. L., & Silva, T. H.",
+      year: "2023",
+      title: "In Vivo Skin Hydrating Efficacy of Fish Collagen from Greenland Halibut as a High-Value Active Ingredient for Cosmetic Applications",
+      journal: "Marine Drugs",
+      doi: "https://doi.org/10.3390/md21020057"
+    },
+    {
+      authors: "Manufacturer & Exporter of Biological Products | Titan Biotech Limited",
+      year: "2024",
+      title: "Revitalize Skin & Hair: Fish Collagen, Hyaluronic Acid, CoQ10, Glutathione",
+      journal: "Titan Biotech Limited",
+      doi: "https://titanbiotechltd.com/blogs/unlock-healthy-skin-and-hair/#:~:text=Benefits%20Skin%20Elasticity%20and%20Firmness%2D%20Fish%20collagen,Aging%2D%20Hair%20Growth%20and%20Strength%2D%20Scalp%20Health%2D"
+    }
+    ,
+      
+,    {
+  authors: "Meticulous Research",
+  year: "2024",
+  title: "Southeast Asia Collagen Market: Rising Consumer Awareness and Product Innovations",
+  journal: "OpenPR.com",
+  doi: "https://www.openpr.com/news/3641629/southeast-asia-collagen-market-rising-consumer-awareness#:~:text=This%20growth%20is%20largely%20driven%20by%20the,for%20protein%20and%20nutricosmetics%2C%20expanding%20applications%20in"
+}
+,
+
     {
       authors: "Nitsuwat, S., Zhang, P., Ng, K., & Fang, Z.",
       year: "2021",
       title: "Fish gelatin as an alternative to mammalian gelatin for food industry: A meta-analysis.",
       journal: "LWT, 110899",
       doi: "https://doi.org/10.1016/j.lwt.2021.110899"
-    },
+    },{
+      authors: "Rajabimashhadi, Z., Gallo, N., Salvatore, L., & Lionetto, F.",
+      year: "2023",
+      title: "Collagen Derived from Fish Industry Waste: Progresses and Challenges",
+      journal: "Polymers",
+      doi: "https://doi.org/10.3390/polym15030544"
+    }
+,   
+{
+  authors: "Qin, D., Bi, S., You, X., Wang, M., Cong, X., Yuan, C., Yu, M., Cheng, X., & Chen, X.-G.",
+  year: "2022",
+  title: "Development and application of fish scale wastes as versatile natural biomaterials.",
+  journal: "Chemical Engineering Journal, 428, 131102",
+  doi: "https://doi.org/10.1016/j.cej.2021.131102"
+}, 
+{
+  authors: "Song, Z., Liu, H., Chen, L., Chen, L., Zhou, C., Hong, P., & Deng, C.",
+  year: "2020",
+  title: "Characterization and comparison of collagen extracted from the skin of the Nile tilapia by fermentation and chemical pretreatment",
+  journal: "Food Chemistry",
+  doi: "https://doi.org/10.1016/j.foodchem.2020.128139"
+}
+,  {
+      authors: "Usman, M., Sahar, A., Inam‐Ur‐Raheem, M., Rahman, U. U., Sameen, A., & Aadil, R. M.",
+      year: "2021",
+      title: "Gelatin extraction from fish waste and potential applications in food sector",
+      journal: "International Journal of Food Science & Technology",
+      doi: "https://doi.org/10.1111/ijfs.15286"
+    }
+,    
     {
       authors: "Valcarcel, J., Fraguas, J., Hermida-Merino, C., Hermida-Merino, D., Piñeiro, M. M., & Vázquez, J. A.",
       year: "2021",

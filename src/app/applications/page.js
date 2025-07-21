@@ -1042,7 +1042,7 @@ export default function Applications() {
           
           {/* Food Industry */}
           <IndustrySection
-            title="Food Industry Revolution"
+            title="Food Industry Revolution (Al-Nimry et al., 2021) "
             description="Fish gelatin transforming food manufacturing with superior properties"
             icon={<Package />}
             color="from-green-500 to-emerald-500"
@@ -1062,7 +1062,7 @@ export default function Applications() {
                 viewport={{ once: true }}
                 className="bg-white/90 backdrop-blur-lg rounded-2xl p-8 border border-green-200"
               >
-                <h4 className="text-2xl font-bold text-green-800 mb-4">The Gelatin Revolution in Food Manufacturing</h4>
+                <h4 className="text-2xl font-bold text-green-800 mb-4">The Gelatin Revolution in Food Manufacturing (Valcarcel et al., 2021)</h4>
                 <p className="text-gray-700 leading-relaxed mb-6">
                   Gelatin is a hydrocolloid food ingredient commonly used in the food industry due to its exceptional functional properties. 
                   Fish gelatin, extracted from fish skin and bones, represents a revolutionary halal substitute to traditional pig- and cattle-derived gelatin. 
@@ -1094,7 +1094,7 @@ export default function Applications() {
               {/* Specific Applications */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <ApplicationCard
-                  title="Confectionery Products"
+                  title="Confectionery Products (Hsu et al., 2021)"
                   description="Fish gelatin excels in candies, jellies, and marshmallows, providing superior gel strength and crystal-clear appearance."
                   benefits={[
                     "Gummy bears and fruit snacks with perfect texture",
@@ -1110,7 +1110,7 @@ export default function Applications() {
                 />
                 
                 <ApplicationCard
-                  title="Dairy & Frozen Products"
+                  title="Dairy & Frozen Products (Usman et al., 2021)"
                   description="Enhanced functionality in yogurts, ice cream, and frozen desserts through superior stabilization properties."
                   benefits={[
                     "Improved texture and mouthfeel in yogurts",
@@ -1142,44 +1142,13 @@ export default function Applications() {
                 />
               </div>
 
-              {/* Technical Properties */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border border-green-200"
-              >
-                <h4 className="text-2xl font-bold text-green-800 mb-6 text-center">Functional Properties Comparison</h4>
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-green-600 mb-2">Similar</div>
-                    <div className="text-sm text-green-700 font-medium">Gel Strength</div>
-                    <div className="text-xs text-gray-600 mt-1">Comparable to mammalian gelatin</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-green-600 mb-2">100%</div>
-                    <div className="text-sm text-green-700 font-medium">Halal Status</div>
-                    <div className="text-xs text-gray-600 mt-1">Religious compliance guaranteed</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-green-600 mb-2">Clear</div>
-                    <div className="text-sm text-green-700 font-medium">Transparency</div>
-                    <div className="text-xs text-gray-600 mt-1">Crystal clear gels</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-green-600 mb-2">Neutral</div>
-                    <div className="text-sm text-green-700 font-medium">Taste Profile</div>
-                    <div className="text-xs text-gray-600 mt-1">No fishy taste or odor</div>
-                  </div>
-                </div>
-              </motion.div>
+         
             </div>
           </IndustrySection>
 
           {/* Healthcare & Pharmaceuticals */}
           <IndustrySection
-            title="Healthcare & Pharmaceutical Innovation"
+            title="Healthcare & Pharmaceutical Innovation (Kulkarni & Maniyar, 2020)"
             description="Revolutionary medical applications transforming patient care"
             icon={<Heart />}
             color="from-blue-500 to-indigo-500"
@@ -1240,7 +1209,7 @@ export default function Applications() {
               {/* Specific Medical Applications */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <ApplicationCard
-                  title="Revolutionary Wound Healing Patches"
+                  title="Revolutionary Wound Healing Patches (Ragaza & Go, 2024)"
                   description="Fish-derived healing patches and skin grafts show remarkable effectiveness, with tilapia and milkfish demonstrating exceptional clinical results."
                   benefits={[
                     "Complete epithelial tissue formation within 14 days",
@@ -1257,7 +1226,7 @@ export default function Applications() {
                 />
                 
                 <ApplicationCard
-                  title="Advanced Pharmaceutical Applications"
+                  title="Advanced Pharmaceutical Applications (Al-Nimry et al., 2021)"
                   description="Fish gelatin revolutionizes pharmaceutical capsules, tablets, and supplement delivery with superior properties and religious compliance."
                   benefits={[
                     "Superior dissolution properties for faster drug release",
@@ -1282,7 +1251,7 @@ export default function Applications() {
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-200"
               >
-                <h4 className="text-2xl font-bold text-blue-800 mb-6 text-center">Tissue Engineering Breakthroughs</h4>
+                <h4 className="text-2xl font-bold text-blue-800 mb-6 text-center">Tissue Engineering Breakthroughs (Rajabimashhadi et al., 2023)</h4>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                   <div className="text-center">
                     <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-violet-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -1328,7 +1297,7 @@ export default function Applications() {
                   <div>
                     <h5 className="font-semibold text-blue-700 mb-3 flex items-center">
                       <Fish className="w-5 h-5 mr-2" />
-                      Tilapia Skin Research
+                      Tilapia Skin Research (Song et al., 2020)
                     </h5>
                     <p className="text-gray-700 text-sm leading-relaxed mb-4">
                       Clinical studies on tilapia skin grafts have shown remarkable effectiveness in burn treatment and wound healing. 
@@ -1343,7 +1312,7 @@ export default function Applications() {
                   <div>
                     <h5 className="font-semibold text-blue-700 mb-3 flex items-center">
                       <Fish className="w-5 h-5 mr-2" />
-                      Milkfish Applications
+                      Milkfish Applications (Ragaza & Go, 2024)
                     </h5>
                     <p className="text-gray-700 text-sm leading-relaxed mb-4">
                       Milkfish, an economically significant species in the Philippines, shows exceptional potential for skin grafting 
@@ -1361,7 +1330,7 @@ export default function Applications() {
 
           {/* Cosmetics Industry */}
           <IndustrySection
-            title="Cosmetics & Personal Care Revolution"
+            title="Cosmetics & Personal Care Revolution (Martins et al., 2023)"
             description="Marine collagen transforming beauty and personal care industries"
             icon={<Sparkles />}
             color="from-pink-500 to-rose-500"
@@ -1389,7 +1358,7 @@ export default function Applications() {
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="bg-pink-50 rounded-lg p-4">
-                    <h5 className="font-semibold text-pink-800 mb-2">Market Advantages</h5>
+                    <h5 className="font-semibold text-pink-800 mb-2">Market Advantages (Meticulous Research, 2024)</h5>
                     <ul className="space-y-1 text-sm text-gray-700">
                       <li>• Rapid market growth in Southeast Asia</li>
                       <li>• Superior biocompatibility and absorption</li>
@@ -1415,11 +1384,10 @@ export default function Applications() {
                   title="Advanced Anti-Aging Formulations"
                   description="Marine collagen demonstrates superior anti-aging properties with measurable improvements in skin health and appearance."
                   benefits={[
-                    "25-30% increase in skin hydration levels",
-                    "15-20% improvement in skin elasticity",
-                    "10-15% reduction in wrinkle depth",
-                    "Enhanced skin barrier function and protection",
-                    "Faster absorption than mammalian collagen"
+                    "25-30% increase in skin hydration levels (Jadach & Mielcarek, 2024)",
+                    "15-20% improvement in skin elasticity (Jadach & Mielcarek, 2024)",
+                    "Enhanced skin barrier function and protection (Campalani et al., 2022)",
+                    "The smaller molecular size of fish collagen allows for better skin penetration and bioavailability (Jadach & Mielcarek, 2024)."
                   ]}
                   icon={<Star />}
                   stats={[
@@ -1429,8 +1397,8 @@ export default function Applications() {
                 />
                 
                 <ApplicationCard
-                  title="Revolutionary Hair Care Innovation"
-                  description="Biodegradable collagen combined with hyaluronic acid, ceramides, and raspberry oil for comprehensive hair and skin protection."
+                  title="Revolutionary Hair Care Innovation (Titan Biotech Limited, 2024)"
+                  description="Biodegradable collagen derived from fish, especially when combined with hyaluronic acid, ceramides, and raspberry oil, offers an eco-friendly and effective alternative for hair care. This blend helps protect hair from environmental damage while enhancing the overall health of both hair and skin (Igielska-Kalwat et al., 2022)."
                   benefits={[
                     "Protection from environmental damage",
                     "Enhanced hair strength and natural shine",
@@ -1441,6 +1409,7 @@ export default function Applications() {
                   icon={<Crown />}
                   stats={[
                     { value: "Eco", label: "Friendly" },
+
                     { value: "Multi", label: "Function" }
                   ]}
                 />
@@ -1450,9 +1419,9 @@ export default function Applications() {
                   description="Marine collagen for cosmetic injections and dermal fillers providing natural-looking results with superior safety profiles."
                   benefits={[
                     "Natural-looking volumizing effects",
-                    "Reduced risk of allergic reactions",
+                    "Reduced risk of allergic reactions (Rajabimashhadi et al., 2023)",
                     "Longer-lasting results than synthetic fillers",
-                    "Stimulates natural collagen production",
+                    "Stimulates natural collagen production (Kester, 2020)",
                     "Gradual and natural absorption"
                   ]}
                   icon={<Eye />}
@@ -1543,7 +1512,7 @@ export default function Applications() {
 
           {/* Environmental Sector */}
           <IndustrySection
-            title="Environmental Solutions & Sustainability"
+            title="Environmental Solutions & Sustainability (Cooney et al., 2023)"
             description="Revolutionary eco-friendly materials and waste reduction technologies"
             icon={<Leaf />}
             color="from-emerald-500 to-teal-500"
@@ -1563,7 +1532,7 @@ export default function Applications() {
                 viewport={{ once: true }}
                 className="bg-white/90 backdrop-blur-lg rounded-2xl p-8 border border-emerald-200"
               >
-                <h4 className="text-2xl font-bold text-emerald-800 mb-4">Environmental Impact and Waste Transformation</h4>
+                <h4 className="text-2xl font-bold text-emerald-800 mb-4">Environmental Impact and Waste Transformation (De Ungria et al., 2023)</h4>
                 <p className="text-gray-700 leading-relaxed mb-6">
                   The environmental sector greatly benefits from fish waste upcycling technology. The Philippines generates approximately 
                   1.1-1.32 million metric tons of fish waste annually, representing 25-30% of fish production lost due to improper harvesting. 
@@ -1604,7 +1573,7 @@ export default function Applications() {
               {/* Specific Applications */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <ApplicationCard
-                  title="Advanced Biodegradable Packaging Films"
+                  title="Advanced Biodegradable Packaging Films (Campalani et al., 2022)"
                   description="Fish gelatin films enhanced with carbon dots deliver superior performance in UV protection, flexibility, and environmental sustainability."
                   benefits={[
                     "70% UV ray blocking capability while maintaining transparency",
@@ -1621,7 +1590,7 @@ export default function Applications() {
                 />
                 
                 <ApplicationCard
-                  title="Comprehensive Waste Stream Transformation"
+                  title="Comprehensive Waste Stream Transformation (De Ungria et al., 2023"
                   description="Revolutionary approach converting entire fish waste streams into valuable biomaterials, addressing the Philippines' massive annual waste challenge."
                   benefits={[
                     "Complete utilization of 1.1-1.32 million metric tons annually",
@@ -1646,7 +1615,7 @@ export default function Applications() {
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 border border-emerald-200"
               >
-                <h4 className="text-2xl font-bold text-emerald-800 mb-6 text-center">Carbon Dot Enhancement Technology</h4>
+                <h4 className="text-2xl font-bold text-emerald-800 mb-6 text-center">Carbon Dot Enhancement Technology (Campalani et al., 2022)</h4>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                   <div className="text-center">
                     <div className="text-3xl font-bold text-emerald-600 mb-2">70%</div>
@@ -1679,7 +1648,8 @@ export default function Applications() {
                 viewport={{ once: true }}
                 className="bg-white/90 backdrop-blur-lg rounded-2xl p-8 border border-emerald-200"
               >
-                <h4 className="text-2xl font-bold text-emerald-800 mb-6">Emerging Environmental Applications</h4>
+                <h4 className="text-2xl font-bold text-emerald-800 mb-6">Emerging Environmental Applications (Alfio et al., 2021)
+                </h4>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="text-center">
                     <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
