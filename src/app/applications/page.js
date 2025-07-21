@@ -1379,57 +1379,43 @@ export default function Applications() {
               </motion.div>
 
               {/* Specific Applications */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <ApplicationCard
-                  title="Advanced Anti-Aging Formulations"
-                  description="Marine collagen demonstrates superior anti-aging properties with measurable improvements in skin health and appearance."
-                  benefits={[
-                    "25-30% increase in skin hydration levels (Jadach & Mielcarek, 2024)",
-                    "15-20% improvement in skin elasticity (Jadach & Mielcarek, 2024)",
-                    "Enhanced skin barrier function and protection (Campalani et al., 2022)",
-                    "The smaller molecular size of fish collagen allows for better skin penetration and bioavailability (Jadach & Mielcarek, 2024)."
-                  ]}
-                  icon={<Star />}
-                  stats={[
-                    { value: "27.5%", label: "Hydration boost" },
-                    { value: "15-20%", label: "Elasticity gain" }
-                  ]}
-                />
-                
-                <ApplicationCard
-                  title="Revolutionary Hair Care Innovation (Titan Biotech Limited, 2024)"
-                  description="Biodegradable collagen derived from fish, especially when combined with hyaluronic acid, ceramides, and raspberry oil, offers an eco-friendly and effective alternative for hair care. This blend helps protect hair from environmental damage while enhancing the overall health of both hair and skin (Igielska-Kalwat et al., 2022)."
-                  benefits={[
-                    "Protection from environmental damage",
-                    "Enhanced hair strength and natural shine",
-                    "Improved scalp health and circulation",
-                    "Eco-friendly and sustainable formulation",
-                    "Multifunctional hair and skin benefits"
-                  ]}
-                  icon={<Crown />}
-                  stats={[
-                    { value: "Eco", label: "Friendly" },
-
-                    { value: "Multi", label: "Function" }
-                  ]}
-                />
-
-                <ApplicationCard
-                  title="Injectable Beauty Treatments"
-                  description="Marine collagen for cosmetic injections and dermal fillers providing natural-looking results with superior safety profiles."
-                  benefits={[
-                    "Natural-looking volumizing effects",
-                    "Reduced risk of allergic reactions (Rajabimashhadi et al., 2023)",
-                    "Longer-lasting results than synthetic fillers",
-                    "Stimulates natural collagen production (Kester, 2020)",
-                    "Gradual and natural absorption"
-                  ]}
-                  icon={<Eye />}
-                  stats={[
-                    { value: "Natural", label: "Results" },
-                    { value: "Safe", label: "Profile" }
-                  ]}
-                />
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:justify-center md:flex md:flex-row md:items-stretch">
+                <div className="md:col-span-1 md:flex-1 md:flex md:justify-center">
+                  <ApplicationCard
+                    title="Advanced Anti-Aging Formulations"
+                    description="Marine collagen demonstrates superior anti-aging properties with measurable improvements in skin health and appearance."
+                    benefits={[
+                      "25-30% increase in skin hydration levels (Jadach & Mielcarek, 2024)",
+                      "15-20% improvement in skin elasticity (Jadach & Mielcarek, 2024)",
+                      "Enhanced skin barrier function and protection (Campalani et al., 2022)",
+                      "The smaller molecular size of fish collagen allows for better skin penetration and bioavailability (Jadach & Mielcarek, 2024).",
+                      "Injectable Beauty Treatments (Rajabimashhadi et al., 2023)",
+                    ]}
+                    icon={<Star />}
+                    stats={[
+                      { value: "27.5%", label: "Hydration boost" },
+                      { value: "15-20%", label: "Elasticity gain" }
+                    ]}
+                  />
+                </div>
+                <div className="md:col-span-1 md:flex-1 md:flex md:justify-center">
+                  <ApplicationCard
+                    title="Revolutionary Hair Care Innovation (Titan Biotech Limited, 2024)"
+                    description="Biodegradable collagen derived from fish, especially when combined with hyaluronic acid, ceramides, and raspberry oil, offers an eco-friendly and effective alternative for hair care. This blend helps protect hair from environmental damage while enhancing the overall health of both hair and skin (Igielska-Kalwat et al., 2022)."
+                    benefits={[
+                      "Protection from environmental damage",
+                      "Enhanced hair strength and natural shine",
+                      "Improved scalp health and circulation",
+                      "Eco-friendly and sustainable formulation",
+                      "Multifunctional hair and skin benefits"
+                    ]}
+                    icon={<Crown />}
+                    stats={[
+                      { value: "Eco", label: "Friendly" },
+                      { value: "Multi", label: "Function" }
+                    ]}
+                  />
+                </div>
               </div>
 
               {/* Scientific Research */}
