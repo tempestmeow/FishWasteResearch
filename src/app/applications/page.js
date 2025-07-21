@@ -1424,7 +1424,7 @@ export default function Applications() {
                   icon={<Star />}
                   stats={[
                     { value: "27.5%", label: "Hydration boost" },
-                    { value: "17.5%", label: "Elasticity gain" }
+                    { value: "15-20%", label: "Elasticity gain" }
                   ]}
                 />
                 
